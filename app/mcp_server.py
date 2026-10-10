@@ -1,6 +1,7 @@
 """Unauthenticated MCP tools, shared by Streamable HTTP and stdio."""
 
 import asyncio
+from datetime import date
 import os
 from typing import Annotated, Literal
 from urllib.parse import urlsplit
@@ -11,7 +12,7 @@ from mcp.server.transport_security import TransportSecuritySettings
 from mcp.types import ToolAnnotations
 from pydantic import Field
 
-from app.history import HistoryError
+from app.history import HistoryError, START_DATE
 from app.models import MonthlyHistory
 from app import service
 
@@ -42,7 +43,7 @@ def create_mcp_server() -> FastMCP:
     mcp = FastMCP(
         "monthlyath",
         instructions=(
-            "Download monthly OHLC for Indian stocks. History starts at 2000 or the first "
+            "Download monthly OHLC for Indian stocks from Upstox. An optional start_date defaults to 2000-01-01. History starts at that date or the first "
             "available trading date. Check coverage warnings. Set include_incomplete=false "
             "when you need completed monthly candles."
         ),
@@ -64,16 +65,18 @@ def create_mcp_server() -> FastMCP:
         exchange: Literal["NSE", "BSE"] | None = None,
         adjusted: bool = False,
         include_incomplete: bool = True,
+        start_date: date = START_DATE,
     ) -> MonthlyHistory:
-        """Get monthly open/high/low/close, volume and coverage metadata from 2000 through today.
+        """Get monthly OHLC, volume and coverage from start_date (default 2000-01-01) through today.
 
         NSE is the default; .BO selects BSE. No pre-listing candles are fabricated.
         The ongoing month is included by default and marked is_complete=false.
+        The server needs an Upstox token; clients do not. adjusted must remain false.
         """
         try:
-            # yfinance is synchronous; keep downloads off the MCP event loop.
+            # Provider requests are synchronous; keep them off the MCP event loop.
             return await asyncio.to_thread(
-                service.get_monthly_history, symbol, exchange, adjusted, include_incomplete,
+                service.get_monthly_history, symbol, exchange, adjusted, include_incomplete, start_date,
             )
         except HistoryError as exc:
             raise ToolError(f"History error {exc.status_code}: {exc}") from exc

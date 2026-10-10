@@ -1,25 +1,17 @@
 """Fetch daily history and aggregate it into Indian calendar-month candles."""
 
-from datetime import date, datetime, timedelta
-import logging
+from datetime import date, datetime
 import re
 from zoneinfo import ZoneInfo
 
 import numpy as np
 import pandas as pd
-import yfinance as yf
-from yfinance.exceptions import YFPricesMissingError, YFRateLimitError, YFTzMissingError
+from app.errors import HistoryError
+from app.upstox import fetch_daily_history
 
-LOGGER = logging.getLogger(__name__)
 INDIA = ZoneInfo("Asia/Kolkata")
 START_DATE = date(2000, 1, 1)
 PRICE_COLUMNS = ["Open", "High", "Low", "Close"]
-
-
-class HistoryError(Exception):
-    def __init__(self, status_code: int, message: str):
-        super().__init__(message)
-        self.status_code = status_code
 
 
 def india_today() -> date:
@@ -27,7 +19,7 @@ def india_today() -> date:
 
 
 def normalize_symbol(symbol: str, exchange: str | None = None) -> tuple[str, str]:
-    """Bare symbols default to NSE; an explicit Yahoo suffix selects its exchange."""
+    """Bare symbols default to NSE; legacy .NS/.BO suffixes select an exchange."""
     symbol = symbol.strip().upper()
     suffix_exchange = None
     if symbol.endswith((".NS", ".BO")):
@@ -44,39 +36,8 @@ def normalize_symbol(symbol: str, exchange: str | None = None) -> tuple[str, str
     return symbol + suffix, resolved_exchange
 
 
-def fetch_daily_history(symbol: str, today: date, adjusted: bool) -> pd.DataFrame:
-    """Explicit dates avoid yfinance's short default history window."""
-    try:
-        data = yf.Ticker(symbol).history(
-            start=START_DATE.isoformat(),
-            # Yahoo's end date is exclusive. Tomorrow includes today's available bar.
-            end=(today + timedelta(days=1)).isoformat(),
-            interval="1d",
-            auto_adjust=adjusted,
-            back_adjust=False,
-            actions=False,
-            repair=False,
-            keepna=True,
-            rounding=False,
-            timeout=20,
-            raise_errors=True,
-        )
-    except YFRateLimitError as exc:
-        raise HistoryError(503, "Yahoo Finance rate limit reached. Retry after 60 seconds.") from exc
-    except (YFPricesMissingError, YFTzMissingError) as exc:
-        raise HistoryError(
-            404, f"No history available for {symbol}. Check its Yahoo Finance symbol and exchange."
-        ) from exc
-    except Exception as exc:
-        LOGGER.warning("History download failed for %s (%s)", symbol, type(exc).__name__)
-        raise HistoryError(502, "Unable to download history from Yahoo Finance. Please retry.") from exc
-    if data is None or data.empty:
-        raise HistoryError(404, f"No history available for {symbol} since 2000-01-01.")
-    return data
-
-
 def aggregate_monthly(
-    daily: pd.DataFrame, today: date, include_incomplete: bool
+    daily: pd.DataFrame, today: date, include_incomplete: bool, start_date: date = START_DATE,
 ) -> tuple[pd.DataFrame, list[dict], list[str], list[str]]:
     """Return cleaned daily rows, candles, missing months, and coverage warnings."""
     if daily is None or daily.empty:
@@ -89,14 +50,14 @@ def aggregate_monthly(
     if data.index.tz is not None:
         data.index = data.index.tz_convert(INDIA).tz_localize(None)
     data.index = data.index.normalize()
-    data = data.loc[(data.index.date >= START_DATE) & (data.index.date <= today)]
+    data = data.loc[(data.index.date >= start_date) & (data.index.date <= today)]
     data = data.sort_index(kind="stable")
     warnings = []
     if data.index.has_duplicates:
         warnings.append("Duplicate trading dates were returned; the last row for each date was used.")
         data = data.loc[~data.index.duplicated(keep="last")]
     if data.empty:
-        raise HistoryError(404, "No prices are available between 2000-01-01 and today.")
+        raise HistoryError(404, f"No prices are available between {start_date} and today.")
 
     prices = data[PRICE_COLUMNS].apply(pd.to_numeric, errors="coerce")
     # Never silently calculate a candle from corrupt or partially missing OHLC rows.
@@ -119,17 +80,20 @@ def aggregate_monthly(
     missing_months = [str(month) for month in expected if month not in available_months]
     if missing_months:
         warnings.append("Some months within the returned history have no prices; no candles were fabricated.")
-    if data.index[0].year > 2000:
+    if data.index[0].to_period("M") > pd.Period(start_date, freq="M"):
         warnings.append(
-            "History starts after 2000. This may reflect a later listing or limited provider coverage; "
+            "History starts after the requested start month. This may reflect a later listing or limited provider coverage; "
             "the first returned date is not a verified IPO/listing date."
         )
     if (today - data.index[-1].date()).days > 7:
         warnings.append("The latest returned trading date is over 7 days old; history may be stale or trading suspended.")
     warnings.append(
-        "History is limited to Yahoo Finance coverage. Listing-date coverage and individual missing "
+        "History is limited to Upstox coverage. Listing-date coverage and individual missing "
         "trading sessions are not independently verified."
     )
+    warnings.append("OHLC is used as supplied by Upstox; this application does not apply corporate-action adjustments.")
+    if start_date.day != 1:
+        warnings.append("The requested start date is mid-month; the first candle includes only dates on or after that date.")
 
     current_month = pd.Period(today, freq="M")
     candles = []

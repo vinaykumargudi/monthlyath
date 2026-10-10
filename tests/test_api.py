@@ -1,4 +1,4 @@
-"""Synthetic test fixtures; these tests never call Yahoo Finance."""
+"""Synthetic test fixtures; these tests never call Upstox."""
 
 import csv
 from datetime import date
@@ -9,7 +9,6 @@ from fastapi.testclient import TestClient
 import numpy as np
 import pandas as pd
 import pytest
-from yfinance.exceptions import YFPricesMissingError, YFRateLimitError
 
 from app import history, main, service
 from app.history import HistoryError, aggregate_monthly, normalize_symbol
@@ -136,14 +135,16 @@ def test_csv_contains_same_prices_and_partial_flags(client):
     assert rows[-1]["is_complete"] == "False"
 
 
-def test_exchange_and_adjustment_passed_to_provider(client, monkeypatch):
+def test_exchange_and_start_date_passed_to_provider(client, monkeypatch):
     download = Mock(return_value=prices(["2026-09-30"]))
     monkeypatch.setattr(service, "fetch_daily_history", download)
-    response = client.get("/api/stocks/TCS.BO/monthly?adjusted=true")
+    response = client.get("/api/stocks/TCS.BO/monthly?start_date=2020-02-29&include_incomplete=false")
     assert response.status_code == 200
     assert response.json()["exchange"] == "BSE"
-    assert response.json()["adjusted"] is True
-    download.assert_called_once_with("TCS.BO", TODAY, True)
+    assert response.json()["adjusted"] is False
+    assert response.json()["requested_start"] == "2020-02-29"
+    assert response.json()["source"] == "Upstox Historical Candle Data V3"
+    download.assert_called_once_with("TCS.BO", TODAY, False, date(2020, 2, 29), False)
 
 
 @pytest.mark.parametrize("path", [
@@ -151,38 +152,28 @@ def test_exchange_and_adjustment_passed_to_provider(client, monkeypatch):
     "/api/stocks/TCS/monthly?exchange=NYSE",
     "/api/stocks/TCS/monthly?format=xml",
     "/api/stocks/TCS/monthly?adjusted=invalid",
+    "/api/stocks/TCS/monthly?adjusted=true",
+    "/api/stocks/TCS/monthly?start_date=1999-12-31",
+    "/api/stocks/TCS/monthly?start_date=2026-10-11",
+    "/api/stocks/TCS/monthly?start_date=2023-02-29",
     "/api/stocks/AAPL.US/monthly",
 ])
 def test_invalid_requests(client, path):
     assert client.get(path).status_code == 422
 
 
-def test_download_requests_full_daily_range_and_includes_today(monkeypatch):
-    ticker = Mock()
-    ticker.history.return_value = prices(["2000-01-03", "2026-10-09"])
-    factory = Mock(return_value=ticker)
-    monkeypatch.setattr(history.yf, "Ticker", factory)
-    history.fetch_daily_history("TCS.NS", TODAY, True)
-    factory.assert_called_once_with("TCS.NS")
-    args = ticker.history.call_args.kwargs
-    assert args["start"] == "2000-01-01"
-    assert args["end"] == "2026-10-11"
-    assert args["interval"] == "1d"
-    assert args["auto_adjust"] is True
-    assert "period" not in args
-    assert args["raise_errors"] is True
+def test_midmonth_start_filters_prices_before_aggregation(client):
+    body = client.get("/api/stocks/TCS/monthly?start_date=2020-09-25").json()
+    assert body["requested_start"] == "2020-09-25"
+    assert body["data"][0]["open"] == 120
+    assert body["data"][0]["first_trading_date"] == "2020-09-30"
+    assert body["data"][0]["date"] == "2020-09-01"
+    assert any("mid-month" in w for w in body["warnings"])
 
 
-@pytest.mark.parametrize("exception,status", [
-    (YFRateLimitError(), 503),
-    (YFPricesMissingError("BAD.NS", "no prices"), 404),
-    (TimeoutError("provider timed out"), 502),
-])
-def test_provider_exceptions_have_explicit_http_status(client, monkeypatch, exception, status):
-    ticker = Mock()
-    ticker.history.side_effect = exception
-    monkeypatch.setattr(history.yf, "Ticker", Mock(return_value=ticker))
-    monkeypatch.setattr(service, "fetch_daily_history", history.fetch_daily_history)
+@pytest.mark.parametrize("status", [404, 500, 502, 503])
+def test_provider_exceptions_have_explicit_http_status(client, monkeypatch, status):
+    monkeypatch.setattr(service, "fetch_daily_history", Mock(side_effect=HistoryError(status, "Synthetic Upstox error")))
     response = client.get("/api/stocks/TCS/monthly")
     assert response.status_code == status
     if status == 503:

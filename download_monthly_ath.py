@@ -1,7 +1,7 @@
 """Download monthly prices from MonthlyATH and add the running highest CLOSE.
 
 Example: python download_monthly_ath.py TCS --api-url http://127.0.0.1:8000
-Uses only Python's standard library. No API authentication is required.
+Uses Python's standard library. The API server holds the Upstox token; this client needs no credentials.
 """
 
 import argparse
@@ -99,9 +99,10 @@ def fetch_monthly(
     exchange: str | None = None,
     adjusted: bool = False,
     completed_only: bool = False,
-    timeout: float = 60,
+    timeout: float = 120,
+    start_date: date | None = None,
 ) -> dict:
-    """Call the existing REST API, not Yahoo Finance directly."""
+    """Call MonthlyATH; its server holds the Upstox token."""
     symbol = symbol.strip().upper()
     normalized_symbol(symbol, exchange)
     api_url = api_url.strip().rstrip("/")
@@ -120,6 +121,8 @@ def fetch_monthly(
     }
     if exchange:
         params["exchange"] = exchange
+    if start_date is not None:
+        params["start_date"] = start_date.isoformat()
     url = f"{api_url}/api/stocks/{quote(symbol, safe='')}/monthly?{urlencode(params)}"
     request = Request(url, headers={"Accept": "application/json"})
     try:
@@ -180,9 +183,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output-dir", type=Path, default=Path("data"), help="Batch destination directory (default: %(default)s)")
     parser.add_argument("--delay", type=float, default=2, help="Seconds between batch requests (default: %(default)s)")
     parser.add_argument("--exchange", choices=["NSE", "BSE"], help="Defaults to NSE or the symbol's suffix")
-    parser.add_argument("--adjusted", action="store_true", help="Ask the API for adjusted OHLC")
+    parser.add_argument("--adjusted", action="store_true", help="Legacy option; unsupported by the Upstox API")
+    parser.add_argument("--start-date", type=date.fromisoformat, help="Optional inclusive YYYY-MM-DD start date; API default: 2000-01-01")
     parser.add_argument("--completed-only", action="store_true", help="Exclude the ongoing calendar month")
-    parser.add_argument("--timeout", type=float, default=60, help="API timeout in seconds (default: %(default)s)")
+    parser.add_argument("--timeout", type=float, default=120, help="API timeout in seconds (default: %(default)s)")
     args = parser.parse_args(argv)
     if bool(args.symbol) == bool(args.symbols_file):
         parser.error("Provide either a stock symbol or --symbols-file.")
@@ -192,6 +196,10 @@ def main(argv: list[str] | None = None) -> int:
         parser.error("--delay must be a non-negative finite number of seconds.")
     if not math.isfinite(args.timeout) or args.timeout <= 0:
         parser.error("--timeout must be a positive finite number of seconds.")
+    if args.adjusted:
+        parser.error("--adjusted is not supported with Upstox; omit this option.")
+    if args.start_date and args.start_date < date(2000, 1, 1):
+        parser.error("--start-date must be 2000-01-01 or later.")
     try:
         symbols = read_symbols(args.symbols_file, args.exchange) if args.symbols_file else [args.symbol]
     except (ValueError, OSError) as exc:
@@ -223,6 +231,7 @@ def download_one(symbol: str, args: argparse.Namespace) -> None:
     payload = fetch_monthly(
         symbol, args.api_url, exchange=args.exchange, adjusted=args.adjusted,
         completed_only=args.completed_only, timeout=args.timeout,
+        start_date=args.start_date,
     )
     rows = add_alltimehigh(payload["data"])
     # Use a local filename derived from validated input, not response text.

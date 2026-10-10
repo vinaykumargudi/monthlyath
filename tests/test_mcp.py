@@ -81,7 +81,7 @@ def test_tool_matches_rest_and_excludes_current_month(mcp_client):
 
 def test_provider_error_is_mcp_tool_error(mcp_client, monkeypatch):
     def rate_limit(*args):
-        raise HistoryError(503, "Yahoo Finance rate limit reached. Retry after 60 seconds.")
+        raise HistoryError(503, "Upstox rate limit reached. Retry after 60 seconds.")
     monkeypatch.setattr(service, "fetch_daily_history", rate_limit)
     result = request(mcp_client, "tools/call", {
         "name": "get_monthly_history", "arguments": {"symbol": "TCS"},
@@ -97,6 +97,18 @@ def test_invalid_symbol_is_mcp_tool_error(mcp_client):
     }).json()["result"]
     assert result["isError"] is True
     assert "422" in result["content"][0]["text"]
+
+
+def test_mcp_optional_start_date_matches_rest(mcp_client):
+    result = request(mcp_client, "tools/call", {
+        "name": "get_monthly_history",
+        "arguments": {"symbol": "TCS", "start_date": "2026-10-01"},
+    }).json()["result"]
+    assert result["isError"] is False
+    body = result["structuredContent"]
+    assert body == mcp_client.get("/api/stocks/TCS/monthly?start_date=2026-10-01").json()
+    assert body["requested_start"] == "2026-10-01"
+    assert body["count"] == 1
 
 
 def test_no_oauth_metadata_and_bad_origin_rejected(mcp_client):

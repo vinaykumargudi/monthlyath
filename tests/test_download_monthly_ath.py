@@ -2,6 +2,7 @@
 
 from contextlib import contextmanager
 import csv
+from datetime import date
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import math
@@ -108,13 +109,13 @@ class ATHTests(unittest.TestCase):
             self.assertEqual(parsed.path, "/api/stocks/TCS/monthly")
             self.assertEqual(parse_qs(parsed.query)["include_incomplete"], ["true"])
 
-    def test_exchange_adjustments_and_completed_only_reach_the_api(self):
+    def test_exchange_start_date_and_completed_only_reach_the_api(self):
         with api({"count": 4, "data": candles()}) as (url, paths):
-            fetch_monthly("M&M", url, exchange="NSE", adjusted=True, completed_only=True)
+            fetch_monthly("M&M", url, exchange="NSE", completed_only=True, start_date=date(2020, 1, 1))
             parsed = urlsplit(paths[0])
             self.assertEqual(parsed.path, "/api/stocks/M%26M/monthly")
             self.assertEqual(parse_qs(parsed.query), {
-                "format": ["json"], "adjusted": ["true"],
+                "format": ["json"], "adjusted": ["false"], "start_date": ["2020-01-01"],
                 "include_incomplete": ["false"], "exchange": ["NSE"],
             })
 
@@ -170,7 +171,7 @@ class ATHTests(unittest.TestCase):
             old = output / "BAD.NS_monthly_ath.csv"
             old.write_text("previous data\n")
             command = [sys.executable, str(script), '--symbols-file', str(symbols),
-                       '--api-url', url, '--output-dir', str(output), '--delay', '0', '--completed-only']
+                       '--api-url', url, '--output-dir', str(output), '--delay', '0', '--completed-only', '--start-date', '2020-01-01']
             run = subprocess.run(command, text=True, capture_output=True, timeout=10)
             self.assertEqual(run.returncode, 1, run.stderr)
             self.assertIn('2 saved, 1 failed', run.stdout)
@@ -183,6 +184,7 @@ class ATHTests(unittest.TestCase):
             failed = output / 'failed_symbols.csv'
             self.assertEqual(read_symbols(failed), ['BAD.NS'])
             self.assertTrue(all(parse_qs(urlsplit(path).query)['include_incomplete'] == ['false'] for path in paths))
+            self.assertTrue(all(parse_qs(urlsplit(path).query)['start_date'] == ['2020-01-01'] for path in paths))
             # Retry only the failed symbol. The input and failure-report paths may be identical.
             with api({"count": 4, "data": candles()}) as (retry_url, retry_paths):
                 command[command.index(str(symbols))] = str(failed)

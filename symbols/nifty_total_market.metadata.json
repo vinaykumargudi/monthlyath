@@ -10,5 +10,5 @@
   "symbol_count": 755,
   "exchange": "NSE",
   "selection": "All rows in the official constituent download, in source order; no truncation to 700 or 750.",
-  "notes": "The download does not state a constituent effective date. HTTP Last-Modified is a file timestamp, not proof of an effective date. This snapshot is not historical index membership. NSE symbols may not all resolve on Yahoo Finance."
+  "notes": "The download does not state a constituent effective date. HTTP Last-Modified is a file timestamp, not proof of an effective date. This snapshot is not historical index membership. NSE symbols may not all resolve in Upstox's current instrument file."
 }
