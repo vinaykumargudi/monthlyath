@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "monthlyath": {
+      "command": "/absolute/path/to/monthlyath/.venv/bin/python",
+      "args": ["/absolute/path/to/monthlyath/mcp_server.py"]
+    }
+  }
+}

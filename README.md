@@ -21,7 +21,7 @@ cd monthlyath
 python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
 Interactive API documentation: <http://localhost:8000/docs>.
@@ -129,11 +129,101 @@ or inconsistent OHLC values cause an error rather than a misleading candle.
 
 `GET /health` checks application liveness without contacting Yahoo.
 
+## MCP server — no authentication
+
+The same application serves a **Streamable HTTP MCP endpoint** at
+`http://127.0.0.1:8000/mcp`. No API key, bearer token, login or OAuth registration
+is required. Updating an existing checkout:
+
+```bash
+git pull
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --host 127.0.0.1 --port 8000
+```
+
+The tool is named **`get_monthly_history`**. It accepts `symbol`, optional `exchange`,
+`adjusted` (default false), and `include_incomplete` (default true). It returns the
+same structured history and coverage warnings as the REST JSON endpoint.
+
+Example tool arguments:
+
+```json
+{"symbol": "TCS", "include_incomplete": false}
+```
+
+### HTTP client configuration
+
+[`mcp.json`](mcp.json) contains a ready-to-use entry for clients accepting the
+`mcpServers` + `url` format, such as Cursor. Merge this entry into your client's
+MCP configuration while preserving other servers:
+
+```json
+{
+  "mcpServers": {
+    "monthlyath": {
+      "url": "http://127.0.0.1:8000/mcp"
+    }
+  }
+}
+```
+
+For VS Code, the equivalent `.vscode/mcp.json` uses its own schema:
+
+```json
+{
+  "servers": {
+    "monthlyath": {
+      "type": "http",
+      "url": "http://127.0.0.1:8000/mcp"
+    }
+  }
+}
+```
+
+For a client with a server URL form, enter the MCP URL and select **None** for
+authentication if prompted. A cloud-hosted client needs a reachable deployed URL;
+`127.0.0.1` refers to the machine running that client.
+
+### Local stdio client configuration
+
+For local clients that launch an MCP subprocess, use
+[`mcp.stdio.example.json`](mcp.stdio.example.json). Replace both absolute paths
+with the repository's location on your computer:
+
+```json
+{
+  "mcpServers": {
+    "monthlyath": {
+      "command": "/absolute/path/to/monthlyath/.venv/bin/python",
+      "args": ["/absolute/path/to/monthlyath/mcp_server.py"]
+    }
+  }
+}
+```
+
+This mode needs no separately running HTTP API. The client launches the process
+and communicates over stdin/stdout; protocol logs use stderr. The module entry
+point `python -m app.mcp_server` also works from the repository directory.
+
+### Hosting the HTTP endpoint
+
+For an existing deployment, set `MCP_PUBLIC_URL` to its origin, for example
+`https://your-service.run.app`, then use `https://your-service.run.app/mcp` in
+the client. This sets the accepted Host/Origin; it is not a credential. Local
+loopback addresses work without any environment variables. Host/Origin validation
+remains enabled even though authentication is absent. If the hosting platform has
+its own access controls, it must also permit unauthenticated requests.
+
+REST and MCP use the same shared history service. Provider failures become MCP
+tool errors with the corresponding history error code; no credentials resolve
+Yahoo's rate limits or expand its historical coverage.
+
 ## Docker
 
 ```bash
 docker build -t monthlyath .
-docker run --rm -p 8000:8000 monthlyath
+docker run --rm -p 127.0.0.1:8000:8000 monthlyath
 ```
 
 Runs as a non-root user, listening on `PORT` (default `8000`), including on platforms
@@ -149,7 +239,9 @@ python -m pytest -q
 Tests use explicitly synthetic prices and mocked provider responses. They check
 exact OHLC, the 2000 cutoff, a 2020 listing case, exchange routing, India month
 boundaries, completed-only filtering, CSV, bad data and provider failures. They do
-not prove live Yahoo availability.
+not prove live Yahoo availability. MCP tests additionally cover unauthenticated
+initialization, tool discovery and invocation, REST/MCP result parity, provider
+errors, Host/Origin validation, client JSON, and a real stdio subprocess handshake.
 
 A live TCS request during development encountered Yahoo rate limiting and a
 connection timeout; a successful live full-history download was **not** verified

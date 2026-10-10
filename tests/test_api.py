@@ -11,7 +11,7 @@ import pandas as pd
 import pytest
 from yfinance.exceptions import YFPricesMissingError, YFRateLimitError
 
-from app import history, main
+from app import history, main, service
 from app.history import HistoryError, aggregate_monthly, normalize_symbol
 
 TODAY = date(2026, 10, 10)
@@ -28,12 +28,12 @@ def prices(dates, opens=None):
 
 @pytest.fixture
 def client(monkeypatch):
-    monkeypatch.setattr(main, "india_today", lambda: TODAY)
-    monkeypatch.setattr(main, "fetch_daily_history", lambda *args: prices(
+    monkeypatch.setattr(service, "india_today", lambda: TODAY)
+    monkeypatch.setattr(service, "fetch_daily_history", lambda *args: prices(
         ["2020-09-21", "2020-09-30", "2020-10-01", "2026-10-09"],
         [100, 120, 110, 150],
     ))
-    with TestClient(main.app) as test_client:
+    with TestClient(main.create_app()) as test_client:
         yield test_client
 
 
@@ -138,7 +138,7 @@ def test_csv_contains_same_prices_and_partial_flags(client):
 
 def test_exchange_and_adjustment_passed_to_provider(client, monkeypatch):
     download = Mock(return_value=prices(["2026-09-30"]))
-    monkeypatch.setattr(main, "fetch_daily_history", download)
+    monkeypatch.setattr(service, "fetch_daily_history", download)
     response = client.get("/api/stocks/TCS.BO/monthly?adjusted=true")
     assert response.status_code == 200
     assert response.json()["exchange"] == "BSE"
@@ -182,7 +182,7 @@ def test_provider_exceptions_have_explicit_http_status(client, monkeypatch, exce
     ticker = Mock()
     ticker.history.side_effect = exception
     monkeypatch.setattr(history.yf, "Ticker", Mock(return_value=ticker))
-    monkeypatch.setattr(main, "fetch_daily_history", history.fetch_daily_history)
+    monkeypatch.setattr(service, "fetch_daily_history", history.fetch_daily_history)
     response = client.get("/api/stocks/TCS/monthly")
     assert response.status_code == status
     if status == 503:
@@ -190,7 +190,7 @@ def test_provider_exceptions_have_explicit_http_status(client, monkeypatch, exce
 
 
 def test_empty_provider_response_is_404(client, monkeypatch):
-    monkeypatch.setattr(main, "fetch_daily_history", lambda *args: pd.DataFrame())
+    monkeypatch.setattr(service, "fetch_daily_history", lambda *args: pd.DataFrame())
     assert client.get("/api/stocks/TCS/monthly").status_code == 404
 
 
@@ -198,7 +198,7 @@ def test_empty_provider_response_is_404(client, monkeypatch):
 def test_invalid_prices_cannot_be_silently_returned(client, monkeypatch, value):
     frame = prices(["2020-01-01"])
     frame.loc[frame.index[0], "High"] = value
-    monkeypatch.setattr(main, "fetch_daily_history", lambda *args: frame)
+    monkeypatch.setattr(service, "fetch_daily_history", lambda *args: frame)
     assert client.get("/api/stocks/TCS/monthly").status_code == 502
 
 
