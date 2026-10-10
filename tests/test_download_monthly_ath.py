@@ -13,7 +13,7 @@ from threading import Thread
 import unittest
 from urllib.parse import parse_qs, urlsplit
 
-from download_monthly_ath import add_alltimehigh, fetch_monthly
+from download_monthly_ath import add_alltimehigh, fetch_monthly, read_symbols
 
 
 def candles():
@@ -32,12 +32,13 @@ def api(payload, status=200):
     class Handler(BaseHTTPRequestHandler):
         def do_GET(self):
             paths.append(self.path)
-            self.send_response(status)
+            response_status, response_payload = payload(self.path) if callable(payload) else (status, payload)
+            self.send_response(response_status)
             self.send_header("Content-Type", "application/json")
-            if status == 503:
+            if response_status == 503:
                 self.send_header("Retry-After", "60")
             self.end_headers()
-            self.wfile.write(json.dumps(payload).encode())
+            self.wfile.write(json.dumps(response_payload).encode())
 
         def log_message(self, *args):
             pass
@@ -136,6 +137,61 @@ class ATHTests(unittest.TestCase):
             with self.subTest(payload=payload), api(payload) as (url, _):
                 with self.assertRaises(ValueError):
                     fetch_monthly("TCS", url)
+
+    def test_symbols_csv_accepts_bom_official_header_and_deduplicates(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "symbols.csv"
+            path.write_text('\ufeffSymbol,Company Name\ntcs,Tata\nTCS.NS,Tata\nM&M,"Mahindra, Ltd"\n')
+            self.assertEqual(read_symbols(path), ["TCS.NS", "M&M.NS"])
+
+    def test_invalid_csv_is_rejected_before_any_download(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "symbols.csv"
+            for content in ['company\nTCS\n', 'symbol\n', 'symbol\nTCS\n../bad\n',
+                            'symbol,company\n,Tata\n', 'symbol,Symbol\nTCS,TCS\n']:
+                with self.subTest(content=content):
+                    path.write_text(content)
+                    with self.assertRaises(ValueError):
+                        read_symbols(path)
+
+    def test_batch_continues_after_failure_and_failure_file_can_be_retried(self):
+        def response(path):
+            if '/BAD.NS/' in path:
+                return 503, {"detail": "Synthetic rate limit"}
+            return 200, {"count": 4, "data": candles()}
+
+        script = Path(__file__).resolve().parents[1] / "download_monthly_ath.py"
+        with tempfile.TemporaryDirectory() as temp, api(response) as (url, paths):
+            root = Path(temp)
+            symbols = root / "symbols.csv"
+            symbols.write_text('symbol\nTCS\nBAD\nM&M\nTCS.NS\n')
+            output = root / "data"
+            output.mkdir()
+            old = output / "BAD.NS_monthly_ath.csv"
+            old.write_text("previous data\n")
+            command = [sys.executable, str(script), '--symbols-file', str(symbols),
+                       '--api-url', url, '--output-dir', str(output), '--delay', '0', '--completed-only']
+            run = subprocess.run(command, text=True, capture_output=True, timeout=10)
+            self.assertEqual(run.returncode, 1, run.stderr)
+            self.assertIn('2 saved, 1 failed', run.stdout)
+            self.assertEqual(len(paths), 3)
+            self.assertEqual(old.read_text(), 'previous data\n')
+            for symbol in ['TCS.NS', 'M&M.NS']:
+                with (output / f'{symbol}_monthly_ath.csv').open() as handle:
+                    rows = list(csv.DictReader(handle))
+                self.assertEqual([float(r['alltimehigh']) for r in rows], [100, 100, 120, 120])
+            failed = output / 'failed_symbols.csv'
+            self.assertEqual(read_symbols(failed), ['BAD.NS'])
+            self.assertTrue(all(parse_qs(urlsplit(path).query)['include_incomplete'] == ['false'] for path in paths))
+            # Retry only the failed symbol. The input and failure-report paths may be identical.
+            with api({"count": 4, "data": candles()}) as (retry_url, retry_paths):
+                command[command.index(str(symbols))] = str(failed)
+                command[command.index(url)] = retry_url
+                run = subprocess.run(command, text=True, capture_output=True, timeout=10)
+                self.assertEqual(run.returncode, 0, run.stderr)
+                self.assertEqual(len(retry_paths), 1)
+            self.assertEqual(failed.read_text(), 'symbol,error\n')
+            self.assertIn('alltimehigh', old.read_text())
 
 
 if __name__ == "__main__":

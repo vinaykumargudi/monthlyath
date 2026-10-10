@@ -1,0 +1,756 @@
+symbol,company_name,industry,isin
+360ONE,360 ONE WAM Ltd.,Financial Services,INE466L01038
+ABB,ABB India Ltd.,Capital Goods,INE117A01022
+ACC,ACC Ltd.,Construction Materials,INE012A01025
+ACMESOLAR,ACME Solar Holdings Ltd.,Power,INE622W01025
+AIAENG,AIA Engineering Ltd.,Capital Goods,INE212H01026
+APLAPOLLO,APL Apollo Tubes Ltd.,Capital Goods,INE702C01027
+AUBANK,AU Small Finance Bank Ltd.,Financial Services,INE949L01017
+AWL,AWL Agri Business Ltd.,Fast Moving Consumer Goods,INE699H01024
+AXISCADES,AXISCADES Technologies Ltd.,Capital Goods,INE555B01013
+AADHARHFC,Aadhar Housing Finance Ltd.,Financial Services,INE883F01010
+AARTIIND,Aarti Industries Ltd.,Chemicals,INE769A01020
+AARTIPHARM,Aarti Pharmalabs Ltd.,Healthcare,INE0LRU01027
+AAVAS,Aavas Financiers Ltd.,Financial Services,INE216P01012
+ABBOTINDIA,Abbott India Ltd.,Healthcare,INE358A01014
+ACE,Action Construction Equipment Ltd.,Capital Goods,INE731H01025
+ACUTAAS,Acutaas Chemicals Ltd.,Healthcare,INE00FF01025
+ADANIENSOL,Adani Energy Solutions Ltd.,Power,INE931S01010
+ADANIENT,Adani Enterprises Ltd.,Metals & Mining,INE423A01024
+ADANIGREEN,Adani Green Energy Ltd.,Power,INE364U01010
+ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,Services,INE742F01042
+ADANIPOWER,Adani Power Ltd.,Power,INE814H01029
+ATGL,Adani Total Gas Ltd.,Oil Gas & Consumable Fuels,INE399L01023
+ABCAPITAL,Aditya Birla Capital Ltd.,Financial Services,INE674K01013
+ABFRL,Aditya Birla Fashion and Retail Ltd.,Consumer Services,INE647O01011
+ABLBL,Aditya Birla Lifestyle Brands Ltd.,Consumer Services,INE14LE01019
+ABREL,Aditya Birla Real Estate Ltd.,Realty,INE055A01016
+ABSLAMC,Aditya Birla Sun Life AMC Ltd.,Financial Services,INE404A01024
+CPPLUS,Aditya Infotech Ltd.,Capital Goods,INE819V01029
+AVL,Aditya Vision Ltd.,Consumer Services,INE679V01027
+ADVENZYMES,Advanced Enzyme Tech Ltd.,Healthcare,INE837H01020
+AEGISLOG,Aegis Logistics Ltd.,Oil Gas & Consumable Fuels,INE208C01025
+AEGISVOPAK,Aegis Vopak Terminals Ltd.,Oil Gas & Consumable Fuels,INE0INX01018
+AEQUS,Aequs Ltd.,Capital Goods,INE947N01017
+AEROFLEX,Aeroflex Industries Ltd.,Capital Goods,INE024001021
+AETHER,Aether Industries Ltd.,Chemicals,INE0BWX01014
+AFCONS,Afcons Infrastructure Ltd.,Construction,INE101I01011
+AFFLE,Affle 3i Ltd.,Information Technology,INE00WC01027
+AJANTPHARM,Ajanta Pharmaceuticals Ltd.,Healthcare,INE031B01049
+AKUMS,Akums Drugs and Pharmaceuticals Ltd.,Healthcare,INE09XN01023
+ALKEM,Alkem Laboratories Ltd.,Healthcare,INE540L01014
+ALKYLAMINE,Alkyl Amines Chemicals Ltd.,Chemicals,INE150B01039
+ABDL,Allied Blenders and Distillers Ltd.,Fast Moving Consumer Goods,INE552Z01027
+AMAGI,Amagi Media Labs Ltd.,Information Technology,INE121R01077
+ARE&M,Amara Raja Energy & Mobility Ltd.,Automobile and Auto Components,INE885A01032
+AMBER,Amber Enterprises India Ltd.,Consumer Durables,INE371P01015
+AMBUJACEM,Ambuja Cements Ltd.,Construction Materials,INE079A01024
+ANANDRATHI,Anand Rathi Wealth Ltd.,Financial Services,INE463V01026
+ANANTRAJ,Anant Raj Ltd.,Realty,INE242C01024
+ANGELONE,Angel One Ltd.,Financial Services,INE732I01021
+ANTHEM,Anthem Biosciences Ltd.,Healthcare,INE0CZ201020
+ANURAS,Anupam Rasayan India Ltd.,Chemicals,INE930P01018
+APARINDS,Apar Industries Ltd.,Capital Goods,INE372A01015
+APOLLOHOSP,Apollo Hospitals Enterprise Ltd.,Healthcare,INE437A01024
+APOLLO,Apollo Micro Systems Ltd.,Capital Goods,INE713T01028
+APOLLOTYRE,Apollo Tyres Ltd.,Automobile and Auto Components,INE438A01022
+APTUS,Aptus Value Housing Finance India Ltd.,Financial Services,INE852O01025
+ACI,Archean Chemical Industries Ltd.,Chemicals,INE128X01021
+ARVINDFASN,Arvind Fashions Ltd.,Consumer Services,INE955V01021
+ARVIND,Arvind Ltd.,Textiles,INE034A01011
+ASAHIINDIA,Asahi India Glass Ltd.,Automobile and Auto Components,INE439A01020
+ASHAPURMIN,Ashapura Minechem Ltd.,Metals & Mining,INE348A01023
+ASHOKLEY,Ashok Leyland Ltd.,Capital Goods,INE208A01029
+ASHOKA,Ashoka Buildcon Ltd.,Construction,INE442H01029
+ASIANPAINT,Asian Paints Ltd.,Consumer Durables,INE021A01026
+ASTERDM,Aster DM Quality Care Ltd.,Healthcare,INE914M01019
+ASTRAMICRO,Astra Microwave Products Ltd.,Capital Goods,INE386C01029
+ASTRAL,Astral Ltd.,Capital Goods,INE006I01046
+ATHERENERG,Ather Energy Ltd.,Automobile and Auto Components,INE0LEZ01016
+ATLANTAELE,Atlanta Electricals Ltd.,Capital Goods,INE0Z4F01028
+ATUL,Atul Ltd.,Chemicals,INE100A01010
+AURIONPRO,Aurionpro Solution Ltd.,Information Technology,INE132H01018
+AUROPHARMA,Aurobindo Pharma Ltd.,Healthcare,INE406A01037
+AIIL,Authum Investment & Infrastructure Ltd.,Financial Services,INE206F01022
+AVALON,Avalon Technologies Ltd.,Capital Goods,INE0LCL01028
+AVANTIFEED,Avanti Feeds Ltd.,Fast Moving Consumer Goods,INE871C01038
+DMART,Avenue Supermarts Ltd.,Consumer Services,INE192R01011
+CCAVENUE,AvenuesAI Ltd.,Financial Services,INE483S01020
+AXISBANK,Axis Bank Ltd.,Financial Services,INE238A01034
+AZAD,Azad Engineering Ltd.,Capital Goods,INE02IJ01035
+BEML,BEML Ltd.,Capital Goods,INE258A01024
+BLS,BLS International Services Ltd.,Consumer Services,INE153T01027
+BSE,BSE Ltd.,Financial Services,INE118H01025
+BAGMANE,Bagmane Prime Office REIT,Realty,INE2OVN25015
+BAJAJ-AUTO,Bajaj Auto Ltd.,Automobile and Auto Components,INE917I01010
+BAJAJCON,Bajaj Consumer Care Ltd.,Fast Moving Consumer Goods,INE933K01021
+BAJFINANCE,Bajaj Finance Ltd.,Financial Services,INE296A01032
+BAJAJFINSV,Bajaj Finserv Ltd.,Financial Services,INE918I01026
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd.,Financial Services,INE118A01012
+BAJAJHFL,Bajaj Housing Finance Ltd.,Financial Services,INE377Y01014
+BALAMINES,Balaji Amines Ltd.,Chemicals,INE050E01027
+BALKRISIND,Balkrishna Industries Ltd.,Automobile and Auto Components,INE787D01026
+BALRAMCHIN,Balrampur Chini Mills Ltd.,Fast Moving Consumer Goods,INE119A01028
+BALUFORGE,Balu Forge Industries Ltd.,Capital Goods,INE011E01029
+BANCOINDIA,Banco Products (India) Ltd.,Automobile and Auto Components,INE213C01025
+BANDHANBNK,Bandhan Bank Ltd.,Financial Services,INE545U01014
+BANKBARODA,Bank of Baroda,Financial Services,INE028A01039
+BANKINDIA,Bank of India,Financial Services,INE084A01016
+MAHABANK,Bank of Maharashtra,Financial Services,INE457A01014
+BATAINDIA,Bata India Ltd.,Consumer Durables,INE176A01028
+BELRISE,Belrise Industries Ltd.,Automobile and Auto Components,INE894V01022
+BERGEPAINT,Berger Paints India Ltd.,Consumer Durables,INE463A01038
+BHARATCOAL,Bharat Coking Coal Ltd.,Oil Gas & Consumable Fuels,INE05XR01022
+BDL,Bharat Dynamics Ltd.,Capital Goods,INE171Z01026
+BEL,Bharat Electronics Ltd.,Capital Goods,INE263A01024
+BHARATFORG,Bharat Forge Ltd.,Automobile and Auto Components,INE465A01025
+BHEL,Bharat Heavy Electricals Ltd.,Capital Goods,INE257A01026
+BPCL,Bharat Petroleum Corporation Ltd.,Oil Gas & Consumable Fuels,INE029A01011
+BHARTIARTL,Bharti Airtel Ltd.,Telecommunication,INE397D01024
+BHARTIHEXA,Bharti Hexacom Ltd.,Telecommunication,INE343G01021
+GROWW,Billionbrains Garage Ventures Ltd.,Financial Services,INE0HOQ01053
+BIOCON,Biocon Ltd.,Healthcare,INE376G01013
+BIRLACORPN,Birla Corporation Ltd.,Construction Materials,INE340A01012
+BSOFT,Birlasoft Ltd.,Information Technology,INE836A01035
+BBOX,Black Box Ltd.,Information Technology,INE676A01027
+BLACKBUCK,Blackbuck Ltd.,Services,INE0UIZ01018
+BLUEJET,Blue Jet Healthcare Ltd.,Healthcare,INE0KBH01020
+BLUESTARCO,Blue Star Ltd.,Consumer Durables,INE472A01039
+BLUESTONE,BlueStone Jewellery and Lifestyle Ltd.,Consumer Durables,INE304W01038
+BORORENEW,Borosil Renewables Ltd.,Capital Goods,INE666D01022
+BOSCHLTD,Bosch Ltd.,Automobile and Auto Components,INE323A01026
+FIRSTCRY,Brainbees Solutions Ltd.,Consumer Services,INE02RE01045
+BRIGADE,Brigade Enterprises Ltd.,Realty,INE791I01019
+BRITANNIA,Britannia Industries Ltd.,Fast Moving Consumer Goods,INE216A01030
+BIRET,Brookfield India Real Estate Trust,Realty,INE0FDU25010
+MAPMYINDIA,C.E. Info Systems Ltd.,Information Technology,INE0BV301023
+CCL,CCL Products (I) Ltd.,Fast Moving Consumer Goods,INE421D01022
+CESC,CESC Ltd.,Power,INE486A01021
+CGPOWER,CG Power and Industrial Solutions Ltd.,Capital Goods,INE067A01029
+CIEINDIA,CIE Automotive India Ltd.,Automobile and Auto Components,INE536H01010
+CMRGREEN,CMR Green Technologies Ltd.,Capital Goods,INE00WV01027
+CMSINFO,CMS Info Systems Ltd.,Services,INE925R01014
+CRISIL,CRISIL Ltd.,Financial Services,INE007A01025
+CSBBANK,CSB Bank Ltd.,Financial Services,INE679A01013
+CAMPUS,Campus Activewear Ltd.,Consumer Durables,INE278Y01022
+CANFINHOME,Can Fin Homes Ltd.,Financial Services,INE477A01020
+CANBK,Canara Bank,Financial Services,INE476A01022
+CANHLIFE,Canara HSBC Life Insurance Company Ltd.,Financial Services,INE01TY01017
+CRAMC,Canara Robeco Asset Management Company Ltd.,Financial Services,INE218I01013
+CAPILLARY,Capillary Technologies India Ltd.,Information Technology,INE0ILV01024
+CAPLIPOINT,Caplin Point Laboratories Ltd.,Healthcare,INE475E01026
+CGCL,Capri Global Capital Ltd.,Financial Services,INE180C01042
+CARBORUNIV,Carborundum Universal Ltd.,Capital Goods,INE120A01034
+CARTRADE,Cartrade Tech Ltd.,Consumer Services,INE290S01011
+CASTROLIND,Castrol India Ltd.,Oil Gas & Consumable Fuels,INE172A01027
+CEATLTD,Ceat Ltd.,Automobile and Auto Components,INE482A01020
+CEIGALL,Ceigall India Ltd.,Construction,INE0AG901020
+CELLO,Cello World Ltd.,Consumer Durables,INE0LMW01024
+CEMPRO,Cemindia Projects Ltd.,Construction,INE686A01026
+CENTRALBK,Central Bank of India,Financial Services,INE483A01010
+CDSL,Central Depository Services (India) Ltd.,Financial Services,INE736A01011
+CMPDI,Central Mine Planning & Design Institute Ltd.,Services,INE05HV01027
+CENTUM,Centum Electronics Ltd.,Capital Goods,INE320B01020
+CERA,Cera Sanitaryware Ltd,Consumer Durables,INE739E01017
+CHALET,Chalet Hotels Ltd.,Consumer Services,INE427F01016
+CHAMBLFERT,Chambal Fertilizers & Chemicals Ltd.,Chemicals,INE085A01013
+CHENNPETRO,Chennai Petroleum Corporation Ltd.,Oil Gas & Consumable Fuels,INE178A01016
+CHOICEIN,Choice International Ltd.,Financial Services,INE102B01014
+CHOLAHLDNG,Cholamandalam Financial Holdings Ltd.,Financial Services,INE149A01033
+CHOLAFIN,Cholamandalam Investment and Finance Company Ltd.,Financial Services,INE121A01024
+CIPLA,Cipla Ltd.,Healthcare,INE059A01026
+CUB,City Union Bank Ltd.,Financial Services,INE491A01021
+CLEANMAX,Clean Max Enviro Energy Solutions Ltd.,Power,INE647U01026
+CLEAN,Clean Science and Technology Ltd.,Chemicals,INE227W01023
+COALINDIA,Coal India Ltd.,Oil Gas & Consumable Fuels,INE522F01014
+COCHINSHIP,Cochin Shipyard Ltd.,Capital Goods,INE704P01025
+COFORGE,Coforge Ltd.,Information Technology,INE591G01025
+COHANCE,Cohance Lifesciences Ltd.,Healthcare,INE03QK01018
+COLPAL,Colgate Palmolive (India) Ltd.,Fast Moving Consumer Goods,INE259A01022
+CAMS,Computer Age Management Services Ltd.,Financial Services,INE596I01020
+CONCORDBIO,Concord Biotech Ltd.,Healthcare,INE338H01029
+CONCOR,Container Corporation of India Ltd.,Services,INE111A01025
+COROMANDEL,Coromandel International Ltd.,Chemicals,INE169A01031
+CRAFTSMAN,Craftsman Automation Ltd.,Automobile and Auto Components,INE00LO01017
+CREDITACC,CreditAccess Grameen Ltd.,Financial Services,INE741K01010
+CROMPTON,Crompton Greaves Consumer Electricals Ltd.,Consumer Durables,INE299U01018
+CUMMINSIND,Cummins India Ltd.,Capital Goods,INE298A01020
+CUPID,Cupid Ltd.,Fast Moving Consumer Goods,INE509F01029
+CYIENT,Cyient Ltd.,Information Technology,INE136B01020
+DCBBANK,DCB Bank Ltd.,Financial Services,INE503A01015
+DLF,DLF Ltd.,Realty,INE271C01023
+DOMS,DOMS Industries Ltd.,Fast Moving Consumer Goods,INE321T01012
+DABUR,Dabur India Ltd.,Fast Moving Consumer Goods,INE016A01026
+DALBHARAT,Dalmia Bharat Ltd.,Construction Materials,INE00R701025
+DATAPATTNS,Data Patterns (India) Ltd.,Capital Goods,INE0IX101010
+DATAMATICS,Datamatics Global Services Ltd.,Information Technology,INE365B01017
+DEEPAKFERT,Deepak Fertilisers & Petrochemicals Corp. Ltd.,Chemicals,INE501A01019
+DEEPAKNTR,Deepak Nitrite Ltd.,Chemicals,INE288B01029
+DELHIVERY,Delhivery Ltd.,Services,INE148O01028
+DEVYANI,Devyani International Ltd.,Consumer Services,INE872J01023
+DIACABS,Diamond Power Infrastructure Ltd.,Capital Goods,INE989C01038
+DBL,Dilip Buildcon Ltd.,Construction,INE917M01012
+DIVISLAB,Divi's Laboratories Ltd.,Healthcare,INE361B01024
+DIXON,Dixon Technologies (India) Ltd.,Consumer Durables,INE935N01020
+LALPATHLAB,Dr. Lal Path Labs Ltd.,Healthcare,INE600L01024
+DRREDDY,Dr. Reddy's Laboratories Ltd.,Healthcare,INE089A01031
+DUMMYHEG,Dummy HEG Ltd.,Capital Goods,DUM545A01024
+DUMMYINGL1,Dummy India Glycols ltd. 1,Healthcare,DU1560A01023
+DUMMYINGL2,Dummy India Glycols ltd. 2,Fast Moving Consumer Goods,DU2560A01023
+DUMMYINXGN,Dummy Inox Green Ltd.,Construction,DUM510W01014
+DYNAMATECH,Dynamatic Technologies Ltd.,Capital Goods,INE221B01012
+EIDPARRY,E.I.D. Parry (India) Ltd.,Fast Moving Consumer Goods,INE126A01031
+E2E,E2E NETWORKS Ltd.,Information Technology,INE255Z01027
+EIHOTEL,EIH Ltd.,Consumer Services,INE230A01023
+EMBASSY,EMBASSY OFFICE PARKS REIT,Realty,INE041025011
+EPL,EPL Ltd.,Capital Goods,INE255A01020
+EDELWEISS,Edelweiss Financial Services Ltd.,Financial Services,INE532F01054
+EICHERMOT,Eicher Motors Ltd.,Automobile and Auto Components,INE066A01021
+ELECON,Elecon Engineering Co. Ltd.,Capital Goods,INE205B01031
+EMIL,Electronics Mart India Ltd.,Consumer Services,INE02YR01019
+ELECTCAST,Electrosteel Castings Ltd.,Capital Goods,INE086A01029
+ELGIEQUIP,Elgi Equipments Ltd.,Capital Goods,INE285A01027
+ELLEN,Ellenbarrie Industrial Gases Ltd.,Chemicals,INE236E01022
+EMAMILTD,Emami Ltd.,Fast Moving Consumer Goods,INE548C01032
+EMBDL,Embassy Developments Ltd.,Realty,INE069I01010
+EMCURE,Emcure Pharmaceuticals Ltd.,Healthcare,INE168P01015
+EMMVEE,Emmvee Photovoltaic Power Ltd.,Capital Goods,INE1C6T01020
+ENDURANCE,Endurance Technologies Ltd.,Automobile and Auto Components,INE913H01037
+ENGINERSIN,Engineers India Ltd.,Construction,INE510A01028
+ENTERO,Entero Healthcare Solutions Ltd.,Consumer Services,INE010601016
+EIEL,Enviro Infra Engineers Ltd.,Utilities,INE0LLY01014
+EQUITASBNK,Equitas Small Finance Bank Ltd.,Financial Services,INE063P01018
+ERIS,Eris Lifesciences Ltd.,Healthcare,INE406M01024
+ESCORTS,Escorts Kubota Ltd.,Capital Goods,INE042A01014
+ETERNAL,Eternal Ltd.,Consumer Services,INE758T01015
+EXIDEIND,Exide Industries Ltd.,Automobile and Auto Components,INE302A01020
+NYKAA,FSN E-Commerce Ventures Ltd.,Consumer Services,INE388Y01029
+FEDFINA,Fedbank Financial Services Ltd.,Financial Services,INE007N01010
+FEDERALBNK,Federal Bank Ltd.,Financial Services,INE171A01029
+FACT,Fertilisers and Chemicals Travancore Ltd.,Chemicals,INE188A01015
+FIEMIND,Fiem Industries Ltd,Automobile and Auto Components,INE737H01014
+FINCABLES,Finolex Cables Ltd.,Capital Goods,INE235A01022
+FINPIPE,Finolex Industries Ltd.,Capital Goods,INE183A01024
+FSL,Firstsource Solutions Ltd.,Services,INE684F01012
+FIVESTAR,Five-Star Business Finance Ltd.,Financial Services,INE128S01021
+FORCEMOT,Force Motors Ltd.,Automobile and Auto Components,INE451A01017
+FORTIS,Fortis Healthcare Ltd.,Healthcare,INE061F01013
+FRACTAL,Fractal Analytics Ltd.,Information Technology,INE212S01015
+UTLSOLAR,Fujiyama Power Systems Ltd.,Capital Goods,INE12UR01024
+GAIL,GAIL (India) Ltd.,Oil Gas & Consumable Fuels,INE129A01019
+GVT&D,GE Vernova T&D India Ltd.,Capital Goods,INE200A01026
+GMRAIRPORT,GMR Airports Ltd.,Services,INE776C01039
+GMRP&UI,GMR Power and Urban Infra Ltd.,Power,INE0CU601026
+EBGNG,GNG Electronics Ltd.,Information Technology,INE18JU01028
+GABRIEL,Gabriel India Ltd.,Automobile and Auto Components,INE524A01029
+GALLANTT,Gallantt Ispat Ltd.,Capital Goods,INE297H01019
+GRSE,Garden Reach Shipbuilders & Engineers Ltd.,Capital Goods,INE382Z01011
+GRWRHITECH,Garware Hi-Tech Films Ltd.,Capital Goods,INE291A01017
+GICRE,General Insurance Corporation of India,Financial Services,INE481Y01014
+GENUSPOWER,Genus Power Infrastructures Ltd.,Capital Goods,INE955D01029
+GILLETTE,Gillette India Ltd.,Fast Moving Consumer Goods,INE322A01010
+GLAND,Gland Pharma Ltd.,Healthcare,INE068V01023
+GLAXO,Glaxosmithkline Pharmaceuticals Ltd.,Healthcare,INE159A01016
+GLENMARK,Glenmark Pharmaceuticals Ltd.,Healthcare,INE935A01035
+MEDANTA,Global Health Ltd.,Healthcare,INE474Q01031
+GPIL,Godawari Power & Ispat Ltd.,Capital Goods,INE177H01039
+GODFRYPHLP,Godfrey Phillips India Ltd.,Fast Moving Consumer Goods,INE260B01028
+GODREJAGRO,Godrej Agrovet Ltd.,Fast Moving Consumer Goods,INE850D01014
+GODREJCP,Godrej Consumer Products Ltd.,Fast Moving Consumer Goods,INE102D01028
+GODREJIND,Godrej Industries Ltd.,Diversified,INE233A01035
+GODREJPROP,Godrej Properties Ltd.,Realty,INE484J01027
+GOKEX,Gokaldas Exports Ltd.,Textiles,INE887G01027
+GOKULAGRO,Gokul Agro Resources Ltd.,Fast Moving Consumer Goods,INE314T01033
+GOLDIAM,Goldiam International Ltd.,Consumer Durables,INE025B01025
+GRANULES,Granules India Ltd.,Healthcare,INE101D01020
+GRAPHITE,Graphite India Ltd.,Capital Goods,INE371A01025
+GRASIM,Grasim Industries Ltd.,Construction Materials,INE047A01021
+GRAVITA,Gravita India Ltd.,Metals & Mining,INE024L01027
+GESHIP,Great Eastern Shipping Co. Ltd.,Services,INE017A01032
+GREAVESCOT,Greaves Cotton Ltd.,Capital Goods,INE224A01026
+GRINDWELL,Grindwell Norton Ltd.,Capital Goods,INE536A01023
+GUJALKALI,Gujarat Alkalies & Chemicals Ltd.,Chemicals,INE186A01019
+GAEL,Gujarat Ambuja Exports Ltd.,Fast Moving Consumer Goods,INE036B01030
+FLUOROCHEM,Gujarat Fluorochemicals Ltd.,Chemicals,INE09N301011
+GMDCLTD,Gujarat Mineral Development Corporation Ltd.,Metals & Mining,INE131A01031
+GNFC,Gujarat Narmada Valley Fertilizers and Chemicals Ltd.,Chemicals,INE113A01013
+GPPL,Gujarat Pipavav Port Ltd.,Services,INE517F01014
+GSFC,Gujarat State Fertilizers & Chemicals Ltd.,Chemicals,INE026A01025
+HGINFRA,H.G. Infra Engineering Ltd.,Construction,INE926X01010
+HBLENGINE,HBL Engineering Ltd.,Capital Goods,INE292B01021
+HCLTECH,HCL Technologies Ltd.,Information Technology,INE860A01027
+HDBFS,HDB Financial Services Ltd.,Financial Services,INE756I01012
+HDFCAMC,HDFC Asset Management Company Ltd.,Financial Services,INE127D01025
+HDFCBANK,HDFC Bank Ltd.,Financial Services,INE040A01034
+HDFCLIFE,HDFC Life Insurance Company Ltd.,Financial Services,INE795G01014
+HEGAM,HEG Advanced Materials Ltd.,Capital Goods,INE545A01024
+HFCL,HFCL Ltd.,Telecommunication,INE548A01028
+HAPPSTMNDS,Happiest Minds Technologies Ltd.,Information Technology,INE419U01012
+HAPPYFORGE,Happy Forgings Ltd.,Capital Goods,INE330T01021
+HAVELLS,Havells India Ltd.,Consumer Durables,INE176B01034
+HCG,Healthcare Global Enterprises Ltd.,Healthcare,INE075I01017
+HERITGFOOD,Heritage Foods Ltd.,Fast Moving Consumer Goods,INE978A01027
+HEROMOTOCO,Hero MotoCorp Ltd.,Automobile and Auto Components,INE158A01026
+HEXT,Hexaware Technologies Ltd.,Information Technology,INE093A01041
+HSCL,Himadri Speciality Chemical Ltd.,Chemicals,INE019C01026
+HINDALCO,Hindalco Industries Ltd.,Metals & Mining,INE038A01020
+HAL,Hindustan Aeronautics Ltd.,Capital Goods,INE066F01020
+HCC,Hindustan Construction Co. Ltd.,Construction,INE549A01026
+HINDCOPPER,Hindustan Copper Ltd.,Metals & Mining,INE531E01026
+HINDPETRO,Hindustan Petroleum Corporation Ltd.,Oil Gas & Consumable Fuels,INE094A01015
+HINDUNILVR,Hindustan Unilever Ltd.,Fast Moving Consumer Goods,INE030A01027
+HINDZINC,Hindustan Zinc Ltd.,Metals & Mining,INE267A01025
+POWERINDIA,Hitachi Energy India Ltd.,Capital Goods,INE07Y701011
+HOMEFIRST,Home First Finance Company India Ltd.,Financial Services,INE481N01025
+HONASA,Honasa Consumer Ltd.,Fast Moving Consumer Goods,INE0J5401028
+HONAUT,Honeywell Automation India Ltd.,Capital Goods,INE671A01010
+HUDCO,Housing & Urban Development Corporation Ltd.,Financial Services,INE031A01017
+HYUNDAI,Hyundai Motor India Ltd.,Automobile and Auto Components,INE0V6F01027
+ICICIBANK,ICICI Bank Ltd.,Financial Services,INE090A01021
+ICICIGI,ICICI Lombard General Insurance Company Ltd.,Financial Services,INE765G01017
+ICICIAMC,ICICI Prudential Asset Management Company Ltd.,Financial Services,INE346A01027
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd.,Financial Services,INE726G01019
+IDBI,IDBI Bank Ltd.,Financial Services,INE008A01015
+IDFCFIRSTB,IDFC First Bank Ltd.,Financial Services,INE092T01019
+IFBIND,IFB Industries Ltd.,Consumer Durables,INE559A01017
+IFCI,IFCI Ltd.,Financial Services,INE039A01010
+IIFLCAPS,IIFL Capital Services Ltd.,Financial Services,INE489L01022
+IIFL,IIFL Finance Ltd.,Financial Services,INE530B01024
+INOXINDIA,INOX India Ltd.,Capital Goods,INE616N01034
+IRB,IRB Infrastructure Developers Ltd.,Construction,INE821I01022
+IRCON,IRCON International Ltd.,Construction,INE962Y01021
+ITCHOTELS,ITC Hotels Ltd.,Consumer Services,INE379A01028
+ITC,ITC Ltd.,Fast Moving Consumer Goods,INE154A01025
+ITI,ITI Ltd.,Telecommunication,INE248A01017
+INDGN,Indegene Ltd.,Healthcare,INE065X01017
+INDIACEM,India Cements Ltd.,Construction Materials,INE383A01012
+INDIAGLYCO,India Glycols Ltd.,Fast Moving Consumer Goods,INE560A01023
+INDIAMART,Indiamart Intermesh Ltd.,Consumer Services,INE933S01016
+INDIANB,Indian Bank,Financial Services,INE562A01011
+IEX,Indian Energy Exchange Ltd.,Financial Services,INE022Q01020
+INDHOTEL,Indian Hotels Co. Ltd.,Consumer Services,INE053A01029
+IMFA,Indian Metals & Ferro Alloys Ltd.,Metals & Mining,INE919H01018
+IOC,Indian Oil Corporation Ltd.,Oil Gas & Consumable Fuels,INE242A01010
+IOB,Indian Overseas Bank,Financial Services,INE565A01014
+IRCTC,Indian Railway Catering And Tourism Corporation Ltd.,Consumer Services,INE335Y01020
+IRFC,Indian Railway Finance Corporation Ltd.,Financial Services,INE053F01010
+IREDA,Indian Renewable Energy Development Agency Ltd.,Financial Services,INE202E01016
+INDIGOPNTS,Indigo Paints Ltd.,Consumer Durables,INE09VQ01012
+ICIL,Indo Count Industries Ltd.,Textiles,INE483B01026
+IGL,Indraprastha Gas Ltd.,Oil Gas & Consumable Fuels,INE203G01027
+INDUSTOWER,Indus Towers Ltd.,Telecommunication,INE121J01017
+INDUSINDBK,IndusInd Bank Ltd.,Financial Services,INE095A01012
+NAUKRI,Info Edge (India) Ltd.,Consumer Services,INE663F01032
+INFY,Infosys Ltd.,Information Technology,INE009A01021
+INOXWIND,Inox Wind Ltd.,Capital Goods,INE066P01011
+INTELLECT,Intellect Design Arena Ltd.,Information Technology,INE306R01017
+INDIGO,InterGlobe Aviation Ltd.,Services,INE646L01027
+IGIL,International Gemological Institute Ltd.,Services,INE0Q9301021
+IKS,Inventurus Knowledge Solutions Ltd.,Information Technology,INE115Q01022
+IONEXCHANG,Ion Exchange (India) Ltd.,Utilities,INE570A01022
+IPCALAB,Ipca Laboratories Ltd.,Healthcare,INE571A01038
+JKCEMENT,J.K. Cement Ltd.,Construction Materials,INE823G01014
+JAIBALAJI,JAI BALAJI INDUSTRIES Ltd.,Metals & Mining,INE091G01026
+JBMA,JBM Auto Ltd.,Automobile and Auto Components,INE927D01051
+JKPAPER,JK Paper Ltd.,Forest Materials,INE789E01012
+JKTYRE,JK Tyre & Industries Ltd.,Automobile and Auto Components,INE573A01042
+JMFINANCIL,JM Financial Ltd.,Financial Services,INE780C01023
+JSWCEMENT,JSW Cement Ltd.,Construction Materials,INE718I01012
+JSWENERGY,JSW Energy Ltd.,Power,INE121E01018
+JSWINFRA,JSW Infrastructure Ltd.,Services,INE880J01026
+JSWSTEEL,JSW Steel Ltd.,Metals & Mining,INE019A01038
+JAINREC,Jain Resource Recycling Ltd.,Metals & Mining,INE0YD401026
+JPPOWER,Jaiprakash Power Ventures Ltd.,Power,INE351F01018
+J&KBANK,Jammu & Kashmir Bank Ltd.,Financial Services,INE168A01041
+JAMNAAUTO,Jamna Auto Industries Ltd.,Automobile and Auto Components,INE039C01032
+JSFB,Jana Small Finance Bank Ltd.,Financial Services,INE953L01027
+JAYNECOIND,Jayaswal Neco Industries Ltd.,Capital Goods,INE854B01010
+JSLL,Jeena Sikho Lifecare Ltd.,Consumer Services,INE0J5801029
+JINDALSAW,Jindal Saw Ltd.,Capital Goods,INE324A01032
+JSL,Jindal Stainless Ltd.,Metals & Mining,INE220G01021
+JINDALSTEL,Jindal Steel Ltd.,Metals & Mining,INE749A01030
+JIOFIN,Jio Financial Services Ltd.,Financial Services,INE758E01017
+JUBLFOOD,Jubilant Foodworks Ltd.,Consumer Services,INE797F01020
+JUBLINGREA,Jubilant Ingrevia Ltd.,Chemicals,INE0BY001018
+JUBLPHARMA,Jubilant Pharmova Ltd.,Healthcare,INE700A01033
+JWL,Jupiter Wagons Ltd.,Capital Goods,INE209L01016
+JUSTDIAL,Justdial Ltd.,Consumer Services,INE599M01018
+JYOTHYLAB,Jyothy Labs Ltd.,Fast Moving Consumer Goods,INE668F01031
+JYOTICNC,Jyoti CNC Automation Ltd.,Capital Goods,INE980O01024
+KPRMILL,K.P.R. Mill Ltd.,Textiles,INE930H01031
+KEI,KEI Industries Ltd.,Capital Goods,INE878B01027
+KNRCON,KNR Constructions Ltd.,Construction,INE634I01029
+KPIGREEN,KPI Green Energy Ltd.,Power,INE542W01025
+KPITTECH,KPIT Technologies Ltd.,Information Technology,INE04I401011
+KRBL,KRBL Ltd.,Fast Moving Consumer Goods,INE001B01026
+KRN,KRN HEAT EXCHANGER AND REFRIGERATION Ltd.,Capital Goods,INE0Q3J01015
+KSB,KSB Ltd.,Capital Goods,INE999A01023
+KAJARIACER,Kajaria Ceramics Ltd.,Consumer Durables,INE217B01036
+KPIL,Kalpataru Projects International Ltd.,Construction,INE220B01022
+KALYANKJIL,Kalyan Jewellers India Ltd.,Consumer Durables,INE303R01014
+KANSAINER,Kansai Nerolac Paints Ltd.,Consumer Durables,INE531A01024
+KTKBANK,Karnataka Bank Ltd.,Financial Services,INE614B01018
+KARURVYSYA,Karur Vysya Bank Ltd.,Financial Services,INE036D01028
+KSCL,Kaveri Seed Company Ltd.,Fast Moving Consumer Goods,INE455I01029
+KAYNES,Kaynes Technology India Ltd.,Capital Goods,INE918Z01012
+KEC,Kec International Ltd.,Construction,INE389H01022
+KFINTECH,Kfin Technologies Ltd.,Financial Services,INE138Y01010
+KIRLOSBROS,Kirloskar Brothers Ltd.,Capital Goods,INE732A01036
+KIRLOSENG,Kirloskar Oil Eng Ltd.,Capital Goods,INE146L01010
+KIRLPNU,Kirloskar Pneumatic Company Ltd.,Capital Goods,INE811A01038
+KITEX,Kitex Garments Ltd.,Textiles,INE602G01020
+KMEW,Knowledge Marine & Engineering Works Ltd.,Services,INE0CJD01029
+KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,INE237A01036
+KIMS,Krishna Institute of Medical Sciences Ltd.,Healthcare,INE967H01025
+KWIL,Kwality Wall's (India) Ltd.,Fast Moving Consumer Goods,INE2KCE01013
+LTF,L&T Finance Ltd.,Financial Services,INE498L01015
+LTTS,L&T Technology Services Ltd.,Information Technology,INE010V01017
+LGEINDIA,LG Electronics India Ltd.,Consumer Durables,INE324D01010
+LICHSGFIN,LIC Housing Finance Ltd.,Financial Services,INE115A01026
+LTFOODS,LT Foods Ltd.,Fast Moving Consumer Goods,INE818H01020
+LTM,LTM Ltd.,Information Technology,INE214T01019
+LT,Larsen & Toubro Ltd.,Construction,INE018A01030
+LATENTVIEW,Latent View Analytics Ltd.,Information Technology,INE0I7C01011
+LAURUSLABS,Laurus Labs Ltd.,Healthcare,INE947Q01028
+LXCHEM,Laxmi Organic Industries Ltd.,Chemicals,INE576O01020
+IXIGO,Le Travenues Technology Ltd.,Consumer Services,INE0HV901016
+THELEELA,Leela Palaces Hotels & Resorts Ltd.,Consumer Services,INE0AQ201015
+LEMONTREE,Lemon Tree Hotels Ltd.,Consumer Services,INE970X01018
+LENSKART,Lenskart Solutions Ltd.,Consumer Services,INE956O01016
+LICI,Life Insurance Corporation of India,Financial Services,INE0J1Y01017
+LINDEINDIA,Linde India Ltd.,Chemicals,INE473A01011
+LLOYDSENGG,Lloyds Engineering Works Ltd.,Capital Goods,INE093R01011
+LLOYDSENT,Lloyds Enterprises Ltd.,Metals & Mining,INE080I01025
+LLOYDSME,Lloyds Metals And Energy Ltd.,Metals & Mining,INE281B01032
+LODHA,Lodha Developers Ltd.,Realty,INE670K01029
+LUMAXTECH,Lumax Auto Technologies Ltd.,Automobile and Auto Components,INE872H01027
+LUMAXIND,Lumax Industries Ltd.,Automobile and Auto Components,INE162B01018
+LUPIN,Lupin Ltd.,Healthcare,INE326A01037
+MMTC,MMTC Ltd.,Services,INE123F01029
+MOIL,MOIL Ltd.,Metals & Mining,INE490G01020
+MRF,MRF Ltd.,Automobile and Auto Components,INE883A01011
+MSTCLTD,MSTC Ltd.,Services,INE255X01014
+MTARTECH,MTAR Technologies Ltd.,Capital Goods,INE864I01014
+MBAPL,Madhya Bharat Agro Products Ltd.,Chemicals,INE900L01028
+MGL,Mahanagar Gas Ltd.,Oil Gas & Consumable Fuels,INE002S01010
+M&MFIN,Mahindra & Mahindra Financial Services Ltd.,Financial Services,INE774D01024
+M&M,Mahindra & Mahindra Ltd.,Automobile and Auto Components,INE101A01026
+MANAPPURAM,Manappuram Finance Ltd.,Financial Services,INE522D01027
+MRPL,Mangalore Refinery & Petrochemicals Ltd.,Oil Gas & Consumable Fuels,INE103A01014
+MANKIND,Mankind Pharma Ltd.,Healthcare,INE634S01028
+MANORAMA,Manorama Industries Ltd.,Fast Moving Consumer Goods,INE00VM01036
+MARICO,Marico Ltd.,Fast Moving Consumer Goods,INE196A01026
+MARKSANS,Marksans Pharma Ltd.,Healthcare,INE750C01026
+MARUTI,Maruti Suzuki India Ltd.,Automobile and Auto Components,INE585B01010
+MASTEK,Mastek Ltd.,Information Technology,INE759A01021
+MFSL,Max Financial Services Ltd.,Financial Services,INE180A01020
+MAXHEALTH,Max Healthcare Institute Ltd.,Healthcare,INE027H01010
+MAZDOCK,Mazagoan Dock Shipbuilders Ltd.,Capital Goods,INE249Z01020
+MEDPLUS,Medplus Health Services Ltd.,Consumer Services,INE804L01022
+MEESHO,Meesho Ltd.,Consumer Services,INE0VDM01015
+METROPOLIS,Metropolis Healthcare Ltd.,Healthcare,INE112L01020
+MINDACORP,Minda Corporation Ltd.,Automobile and Auto Components,INE842C01021
+MIDHANI,Mishra Dhatu Nigam Ltd.,Capital Goods,INE099Z01011
+MSUMI,Motherson Sumi Wiring India Ltd.,Automobile and Auto Components,INE0FS801015
+MOTILALOFS,Motilal Oswal Financial Services Ltd.,Financial Services,INE338I01027
+MPHASIS,MphasiS Ltd.,Information Technology,INE356A01018
+BECTORFOOD,Mrs. Bectors Food Specialities Ltd.,Fast Moving Consumer Goods,INE495P01020
+MCX,Multi Commodity Exchange of India Ltd.,Financial Services,INE745G01043
+MUTHOOTFIN,Muthoot Finance Ltd.,Financial Services,INE414G01012
+NATCOPHARM,NATCO Pharma Ltd.,Healthcare,INE987B01026
+NBCC,NBCC (India) Ltd.,Construction,INE095N01031
+NCC,NCC Ltd.,Construction,INE868B01028
+NEOGEN,NEOGEN CHEMICALS LTD.,Chemicals,INE136S01016
+NHPC,NHPC Ltd.,Power,INE848E01016
+NLCINDIA,NLC India Ltd.,Power,INE589A01014
+NMDC,NMDC Ltd.,Metals & Mining,INE584A01023
+NSLNISP,NMDC Steel Ltd.,Metals & Mining,INE0NNS01018
+NTPCGREEN,NTPC Green Energy Ltd.,Power,INE0ONG01011
+NTPC,NTPC Ltd.,Power,INE733E01010
+NH,Narayana Hrudayalaya Ltd.,Healthcare,INE410P01011
+NATIONALUM,National Aluminium Co. Ltd.,Metals & Mining,INE139A01034
+NFL,National Fertilizers Ltd.,Chemicals,INE870D01012
+NAVA,Nava Ltd.,Power,INE725A01030
+NAVINFLUOR,Navin Fluorine International Ltd.,Chemicals,INE048G01026
+NAZARA,Nazara Technologies Ltd.,Media Entertainment & Publication,INE418L01047
+NEPHROPLUS,Nephrocare Health Services Ltd.,Healthcare,INE428V01029
+NESTLEIND,Nestle India Ltd.,Fast Moving Consumer Goods,INE239A01024
+NETWEB,Netweb Technologies India Ltd.,Information Technology,INE0NT901020
+NETWORK18,Network18 Media & Investments Ltd.,Media Entertainment & Publication,INE870H01013
+NEULANDLAB,Neuland Laboratories Ltd.,Healthcare,INE794A01010
+NEWGEN,Newgen Software Technologies Ltd.,Information Technology,INE619B01017
+NAM-INDIA,Nippon Life India Asset Management Ltd.,Financial Services,INE298J01013
+NIVABUPA,Niva Bupa Health Insurance Company Ltd.,Financial Services,INE995S01015
+NORTHARC,Northern Arc Capital Ltd.,Financial Services,INE850M01015
+NUVAMA,Nuvama Wealth Management Ltd.,Financial Services,INE531F01023
+NUVOCO,Nuvoco Vistas Corporation Ltd.,Construction Materials,INE118D01016
+OBEROIRLTY,Oberoi Realty Ltd.,Realty,INE093I01010
+ONGC,Oil & Natural Gas Corporation Ltd.,Oil Gas & Consumable Fuels,INE213A01029
+OIL,Oil India Ltd.,Oil Gas & Consumable Fuels,INE274J01014
+OLAELEC,Ola Electric Mobility Ltd.,Automobile and Auto Components,INE0LXG01040
+OLECTRA,Olectra Greentech Ltd.,Automobile and Auto Components,INE260D01016
+OMNI,Omnitech Engineering Ltd.,Capital Goods,INE0UH301010
+KISSHT,OnEMI Technology Solutions Ltd.,Financial Services,INE12F801023
+PAYTM,One 97 Communications Ltd.,Financial Services,INE982J01020
+ONESOURCE,Onesource Specialty Pharma Ltd.,Healthcare,INE013P01021
+OFSS,Oracle Financial Services Software Ltd.,Information Technology,INE881D01027
+OSWALPUMPS,Oswal Pumps Ltd.,Capital Goods,INE0BYP01024
+PNGJL,P N Gadgil Jewellers Ltd.,Consumer Durables,INE953R01016
+POLICYBZR,PB Fintech Ltd.,Financial Services,INE417T01026
+PCJEWELLER,PC Jeweller Ltd.,Consumer Durables,INE785M01021
+PCBL,PCBL Chemical Ltd.,Chemicals,INE602A01031
+PDSL,PDS Ltd.,Textiles,INE111Q01021
+PGEL,PG Electroplast Ltd.,Consumer Durables,INE457L01029
+PIIND,PI Industries Ltd.,Chemicals,INE603J01030
+PNBHOUSING,PNB Housing Finance Ltd.,Financial Services,INE572E01012
+PNCINFRA,PNC Infratech Ltd.,Construction,INE195J01029
+PTC,PTC India Ltd.,Power,INE877F01012
+PTCIL,PTC Industries Ltd.,Capital Goods,INE596F01018
+PVRINOX,PVR INOX Ltd.,Media Entertainment & Publication,INE191H01014
+PAGEIND,Page Industries Ltd.,Textiles,INE761H01022
+PAISALO,Paisalo Digital Ltd.,Financial Services,INE420C01059
+PARADEEP,Paradeep Phosphates Ltd.,Chemicals,INE088F01024
+PARAS,Paras Defence and Space Technologies Ltd.,Capital Goods,INE045601023
+PARKHOSPS,Park Medi World Ltd.,Healthcare,INE119201023
+PATANJALI,Patanjali Foods Ltd.,Fast Moving Consumer Goods,INE619A01035
+PGIL,Pearl Global Industries Ltd.,Textiles,INE940H01022
+PERSISTENT,Persistent Systems Ltd.,Information Technology,INE262H01021
+PETRONET,Petronet LNG Ltd.,Oil Gas & Consumable Fuels,INE347G01014
+PHOENIXLTD,Phoenix Mills Ltd.,Realty,INE211B01039
+PWL,Physicswallah Ltd.,Consumer Services,INE0LP301011
+PICCADIL,Piccadily Agro Industries Ltd.,Fast Moving Consumer Goods,INE546C01010
+PIDILITIND,Pidilite Industries Ltd.,Chemicals,INE318A01026
+PINELABS,Pine Labs Ltd.,Financial Services,INE15B701018
+PIRAMALFIN,Piramal Finance Ltd.,Financial Services,INE202B01038
+PPLPHARMA,Piramal Pharma Ltd.,Healthcare,INE0DK501011
+POLYMED,Poly Medicure Ltd.,Healthcare,INE205C01021
+POLYCAB,Polycab India Ltd.,Capital Goods,INE455K01017
+POONAWALLA,Poonawalla Fincorp Ltd.,Financial Services,INE511C01022
+PFC,Power Finance Corporation Ltd.,Financial Services,INE134E01011
+POWERGRID,Power Grid Corporation of India Ltd.,Power,INE752E01010
+POWERMECH,Power Mech Projects Ltd.,Construction,INE211R01019
+POWERICA,Powerica Ltd.,Capital Goods,INE921L01032
+PRAJIND,Praj Industries Ltd.,Capital Goods,INE074A01025
+PRECWIRE,Precision Wires India Ltd.,Capital Goods,INE372C01037
+PREMIERENE,Premier Energies Ltd.,Capital Goods,INE0BS701011
+PRESTIGE,Prestige Estates Projects Ltd.,Realty,INE811K01011
+PRICOLLTD,Pricol Ltd.,Automobile and Auto Components,INE726V01018
+PFOCUS,Prime Focus Ltd.,Media Entertainment & Publication,INE367G01038
+PRIVISCL,Privi Speciality Chemicals Ltd.,Chemicals,INE959A01019
+PGHL,Procter & Gamble Health Ltd.,Healthcare,INE199A01012
+PNB,Punjab National Bank,Financial Services,INE160A01022
+PURVA,Puravankara Ltd.,Realty,INE323I01011
+QPOWER,QUALITY POWER ELECTRICAL EQUIPMENTS Ltd.,Capital Goods,INE0SII01026
+QUESS,Quess Corp Ltd.,Services,INE615P01015
+RRKABEL,R R Kabel Ltd.,Capital Goods,INE777K01022
+RBLBANK,RBL Bank Ltd.,Financial Services,INE976G01028
+RECLTD,REC Ltd.,Financial Services,INE020B01018
+RHIM,RHI MAGNESITA INDIA LTD.,Capital Goods,INE743M01012
+RITES,RITES Ltd.,Construction,INE320J01015
+RADICO,Radico Khaitan Ltd,Fast Moving Consumer Goods,INE944F01028
+RVNL,Rail Vikas Nigam Ltd.,Construction,INE415G01027
+RAILTEL,Railtel Corporation Of India Ltd.,Telecommunication,INE0DD101019
+RAIN,Rain Industries Ltd,Chemicals,INE855B01025
+RAINBOW,Rainbow Childrens Medicare Ltd.,Healthcare,INE961O01016
+RALLIS,Rallis India Ltd.,Chemicals,INE613A01020
+RKFORGE,Ramkrishna Forgings Ltd.,Automobile and Auto Components,INE399G01023
+RCF,Rashtriya Chemicals & Fertilizers Ltd.,Chemicals,INE027A01015
+RATEGAIN,Rategain Travel Technologies Ltd.,Information Technology,INE0CLI01024
+RATNAMANI,Ratnamani Metals & Tubes Ltd.,Capital Goods,INE703B01027
+RTNPOWER,RattanIndia Power Ltd.,Power,INE399K01017
+RAYMONDLSL,Raymond Lifestyle Ltd.,Textiles,INE02ID01020
+REDINGTON,Redington Ltd.,Services,INE891D01026
+REFEX,Refex Industries Ltd.,Utilities,INE056I01025
+RELAXO,Relaxo Footwears Ltd.,Consumer Durables,INE131B01039
+RELIANCE,Reliance Industries Ltd.,Oil Gas & Consumable Fuels,INE002A01018
+RPOWER,Reliance Power Ltd.,Power,INE614G01033
+RELIGARE,Religare Enterprises Ltd.,Financial Services,INE621H01010
+RESPONIND,Responsive Industries Ltd.,Consumer Durables,INE688D01026
+RBA,Restaurant Brands Asia Ltd.,Consumer Services,INE07T201019
+ROUTE,Route Mobile Ltd.,Telecommunication,INE450U01017
+RUBICON,Rubicon Research Ltd.,Healthcare,INE506V01022
+SJS,S.J.S. Enterprises Ltd.,Automobile and Auto Components,INE284S01014
+SBFC,SBFC Finance Ltd.,Financial Services,INE423Y01016
+SBICARD,SBI Cards and Payment Services Ltd.,Financial Services,INE018E01016
+SBILIFE,SBI Life Insurance Company Ltd.,Financial Services,INE123W01016
+SEDEMAC,SEDEMAC Mechatronics Ltd.,Automobile and Auto Components,INE00XB01019
+SGMART,SG Mart Ltd.,Metals & Mining,INE385F01024
+SIGMAADV,SIGMA ADVANCED SYSTEMS LTD.,Capital Goods,INE933B01012
+SJVN,SJVN Ltd.,Power,INE002L01015
+SKYGOLD,SKY GOLD AND DIAMONDS Ltd.,Consumer Durables,INE01IU01018
+SMLMAH,SML Mahindra Ltd.,Capital Goods,INE294B01019
+SHRIPISTON,SPR Auto Technologies Ltd.,Automobile and Auto Components,INE526E01018
+SRF,SRF Ltd.,Chemicals,INE647A01010
+LOTUSDEV,SRI LOTUS DEVELOPERS AND REALTY Ltd.,Realty,INE0V9Q01010
+SAFARI,Safari Industries (India) Ltd.,Consumer Durables,INE429E01023
+SAGILITY,Sagility Ltd.,Information Technology,INE0W2G01015
+SAILIFE,Sai Life Sciences Ltd.,Healthcare,INE570L01029
+SAMHI,Samhi Hotels Ltd.,Consumer Services,INE08U801020
+SAMMAANCAP,Sammaan Capital Ltd.,Financial Services,INE148I01020
+MOTHERSON,Samvardhana Motherson International Ltd.,Automobile and Auto Components,INE775A01035
+SANDUMA,Sandur Manganese & Iron Ores Ltd.,Metals & Mining,INE149K01016
+SANSERA,Sansera Engineering Ltd.,Automobile and Auto Components,INE953O01021
+SAPPHIRE,Sapphire Foods India Ltd.,Consumer Services,INE806T01020
+SARDAEN,Sarda Energy and Minerals Ltd.,Metals & Mining,INE385C01021
+SAREGAMA,Saregama India Ltd,Media Entertainment & Publication,INE979A01025
+SCHAEFFLER,Schaeffler India Ltd.,Automobile and Auto Components,INE513A01022
+SCHNEIDER,Schneider Electric Infrastructure Ltd.,Capital Goods,INE839M01018
+SENCO,Senco Gold Ltd.,Consumer Durables,INE602W01027
+SENORES,Senores Pharmaceuticals Ltd.,Healthcare,INE0RB801010
+SHADOWFAX,Shadowfax Technologies Ltd.,Services,INE12UN01015
+SHAILY,Shaily Engineering Plastics Ltd.,Consumer Durables,INE151G01028
+SHAKTIPUMP,Shakti Pumps (India) Ltd.,Capital Goods,INE908D01010
+SHARDACROP,Sharda Cropchem Ltd.,Chemicals,INE221J01015
+SHAREINDIA,Share India Securities Ltd.,Financial Services,INE932X01026
+SFL,Sheela Foam Ltd.,Consumer Durables,INE916U01025
+SHILCTECH,Shilchar Technologies Ltd.,Capital Goods,INE024F01011
+SHILPAMED,Shilpa Medicare Ltd.,Healthcare,INE790G01031
+SCI,Shipping Corporation of India Ltd.,Services,INE109A01011
+SHREECEM,Shree Cement Ltd.,Construction Materials,INE070A01015
+RENUKA,Shree Renuka Sugars Ltd.,Fast Moving Consumer Goods,INE087H01022
+SHREEJISPG,Shreeji Shipping Global Ltd.,Services,INE1B6101010
+SHRIRAMFIN,Shriram Finance Ltd.,Financial Services,INE721A01047
+SHYAMMETL,Shyam Metalics and Energy Ltd.,Capital Goods,INE810G01011
+ENRIN,Siemens Energy India Ltd.,Capital Goods,INE1NPP01017
+SIEMENS,Siemens Ltd.,Capital Goods,INE003A01024
+SIGNATURE,Signatureglobal (India) Ltd.,Realty,INE903U01023
+SKIPPER,Skipper Ltd.,Capital Goods,INE439E01022
+SOBHA,Sobha Ltd.,Realty,INE671H01015
+SOLARINDS,Solar Industries India Ltd.,Chemicals,INE343H01029
+SONACOMS,Sona BLW Precision Forgings Ltd.,Automobile and Auto Components,INE073K01018
+SONATSOFTW,Sonata Software Ltd.,Information Technology,INE269A01021
+SOUTHBANK,South Indian Bank Ltd.,Financial Services,INE683A01023
+STARHEALTH,Star Health and Allied Insurance Company Ltd.,Financial Services,INE575P01011
+SBIN,State Bank of India,Financial Services,INE062A01020
+SAIL,Steel Authority of India Ltd.,Metals & Mining,INE114A01011
+SWSOLAR,Sterling and Wilson Renewable Energy Ltd.,Construction,INE00M201021
+STLTECH,Sterlite Technologies Ltd.,Telecommunication,INE089C01029
+STAR,Strides Pharma Science Ltd.,Healthcare,INE939A01011
+STYLAMIND,Stylam Industries Ltd.,Consumer Durables,INE239C01020
+SUBROS,Subros Ltd.,Capital Goods,INE287B01021
+SUDARSCHEM,Sudarshan Chemical Industries Ltd.,Chemicals,INE659A01023
+SUDEEPPHRM,Sudeep Pharma Ltd.,Chemicals,INE0QPI01025
+SUMICHEM,Sumitomo Chemical India Ltd.,Chemicals,INE258G01013
+SPARC,Sun Pharma Advanced Research Company Ltd.,Healthcare,INE232I01014
+SUNPHARMA,Sun Pharmaceutical Industries Ltd.,Healthcare,INE044A01036
+SUNTV,Sun TV Network Ltd.,Media Entertainment & Publication,INE424H01027
+SUNDARMFIN,Sundaram Finance Ltd.,Financial Services,INE660A01013
+SUNDRMFAST,Sundram Fasteners Ltd.,Automobile and Auto Components,INE387A01021
+SUNFLAG,Sunflag Iron & Steel Company Ltd.,Capital Goods,INE947A01014
+SUNTECK,Sunteck Realty Ltd.,Realty,INE805D01034
+SUPREMEIND,Supreme Industries Ltd.,Capital Goods,INE195A01028
+SPLPETRO,Supreme Petrochem Ltd.,Chemicals,INE663A01033
+SUPRIYA,Supriya Lifescience Ltd.,Healthcare,INE07RO01027
+SURYAROSNI,Surya Roshni Ltd.,Capital Goods,INE335A01020
+SUVEN,Suven Life Sciences Ltd.,Healthcare,INE495B01038
+SUZLON,Suzlon Energy Ltd.,Capital Goods,INE040H01021
+SWANCORP,Swan Corp Ltd.,Chemicals,INE665A01038
+SWIGGY,Swiggy Ltd.,Consumer Services,INE00H001014
+SYNGENE,Syngene International Ltd.,Healthcare,INE398R01022
+SYRMA,Syrma SGS Technology Ltd.,Capital Goods,INE0DYJ01015
+TARC,TARC Ltd.,Realty,INE0EK901012
+TBOTEK,TBO Tek Ltd.,Consumer Services,INE673O01025
+TDPOWERSYS,TD Power Systems Ltd.,Capital Goods,INE419M01035
+TTKPRESTIG,TTK Prestige Ltd.,Consumer Durables,INE690A01028
+TVSMOTOR,TVS Motor Company Ltd.,Automobile and Auto Components,INE494B01023
+TVSSCS,TVS Supply Chain Solutions Ltd.,Services,INE395N01027
+TMB,Tamilnad Mercantile Bank Ltd.,Financial Services,INE668A01016
+TANLA,Tanla Platforms Ltd.,Information Technology,INE483C01032
+TATACAP,Tata Capital Ltd.,Financial Services,INE976I01016
+TATACHEM,Tata Chemicals Ltd.,Chemicals,INE092A01019
+TATACOMM,Tata Communications Ltd.,Telecommunication,INE151A01013
+TCS,Tata Consultancy Services Ltd.,Information Technology,INE467B01029
+TATACONSUM,Tata Consumer Products Ltd.,Fast Moving Consumer Goods,INE192A01025
+TATAELXSI,Tata Elxsi Ltd.,Information Technology,INE670A01012
+TATAINVEST,Tata Investment Corporation Ltd.,Financial Services,INE672A01026
+TMCV,Tata Motors Ltd.,Capital Goods,INE1TAE01010
+TMPV,Tata Motors Passenger Vehicles Ltd.,Automobile and Auto Components,INE155A01022
+TATAPOWER,Tata Power Co. Ltd.,Power,INE245A01021
+TATASTEEL,Tata Steel Ltd.,Metals & Mining,INE081A01020
+TATATECH,Tata Technologies Ltd.,Information Technology,INE142M01025
+TTML,Tata Teleservices (Maharashtra) Ltd.,Telecommunication,INE517B01013
+TECHM,Tech Mahindra Ltd.,Information Technology,INE669C01036
+TECHNOE,Techno Electric & Engineering Company Ltd.,Construction,INE285K01026
+TEGA,Tega Industries Ltd.,Capital Goods,INE011K01018
+TEJASNET,Tejas Networks Ltd.,Telecommunication,INE010J01012
+TENNIND,Tenneco Clean Air India Ltd.,Automobile and Auto Components,INE19RI01016
+TEXRAIL,Texmaco Rail & Eng. Ltd.,Capital Goods,INE621L01012
+THANGAMAYL,Thangamayil Jewellery Ltd.,Consumer Durables,INE085J01014
+NIACL,The New India Assurance Company Ltd.,Financial Services,INE470Y01017
+RAMCOCEM,The Ramco Cements Ltd.,Construction Materials,INE331A01037
+THERMAX,Thermax Ltd.,Capital Goods,INE152A01029
+THOMASCOOK,Thomas Cook (India) Ltd.,Consumer Services,INE332A01027
+THYROCARE,Thyrocare Technologies Ltd.,Healthcare,INE594H01019
+TI,Tilaknagar Industries Ltd.,Fast Moving Consumer Goods,INE133E01013
+TIMETECHNO,Time Technoplast Ltd.,Capital Goods,INE508G01029
+TIMEX,Timex Group India Ltd.,Consumer Durables,INE064A01026
+TIMKEN,Timken India Ltd.,Capital Goods,INE325A01013
+TIPSMUSIC,Tips Music Ltd.,Media Entertainment & Publication,INE716B01029
+TITAGARH,Titagarh Rail Systems Ltd.,Capital Goods,INE615H01020
+TITAN,Titan Company Ltd.,Consumer Durables,INE280A01028
+TORNTPHARM,Torrent Pharmaceuticals Ltd.,Healthcare,INE685A01028
+TORNTPOWER,Torrent Power Ltd.,Power,INE813H01021
+TARIL,Transformers And Rectifiers (India) Ltd.,Capital Goods,INE763I01026
+TRANSRAILL,Transrail Lighting Ltd.,Capital Goods,INE454P01035
+TRENT,Trent Ltd.,Consumer Services,INE849A01020
+TRIDENT,Trident Ltd.,Textiles,INE064C01022
+TRIVENIPT,Triveni Power Transmission Ltd.,Capital Goods,INE2WKE01011
+TRITURBINE,Triveni Turbine Ltd.,Capital Goods,INE152M01016
+TIINDIA,Tube Investments of India Ltd.,Automobile and Auto Components,INE974X01010
+UCOBANK,UCO Bank,Financial Services,INE691A01018
+UNOMINDA,UNO Minda Ltd.,Automobile and Auto Components,INE405E01023
+UPL,UPL Ltd.,Chemicals,INE628A01036
+UTIAMC,UTI Asset Management Company Ltd.,Financial Services,INE094J01016
+UJJIVANSFB,Ujjivan Small Finance Bank Ltd.,Financial Services,INE551W01018
+ULTRACEMCO,UltraTech Cement Ltd.,Construction Materials,INE481G01011
+UNIMECH,Unimech Aerospace and Manufacturing Ltd.,Capital Goods,INE0U3I01011
+UNIONBANK,Union Bank of India,Financial Services,INE692A01016
+UBL,United Breweries Ltd.,Fast Moving Consumer Goods,INE686F01025
+UNITDSPR,United Spirits Ltd.,Fast Moving Consumer Goods,INE854D01024
+URBANCO,Urban Company Ltd.,Consumer Services,INE0CAZ01013
+USHAMART,Usha Martin Ltd.,Capital Goods,INE228A01035
+VGUARD,V-Guard Industries Ltd.,Consumer Durables,INE951I01027
+VMART,V-Mart Retail Ltd.,Consumer Services,INE665J01013
+VIPIND,V.I.P. Industries Ltd.,Consumer Durables,INE054A01027
+V2RETAIL,V2 Retail Ltd.,Consumer Services,INE945H01021
+DBREALTY,VALOR ESTATE Ltd.,Realty,INE879I01012
+WABAG,Va Tech Wabag Ltd.,Utilities,INE956G01038
+VAIBHAVGBL,Vaibhav Global Ltd.,Consumer Durables,INE884A01027
+VTL,Vardhman Textiles Ltd.,Textiles,INE825A01020
+VBL,Varun Beverages Ltd.,Fast Moving Consumer Goods,INE200M01039
+MANYAVAR,Vedant Fashions Ltd.,Consumer Services,INE825V01034
+VAML,Vedanta Aluminium Metal Ltd.,Metals & Mining,INE1CDF01017
+VISL,Vedanta Iron and Steel Ltd.,Metals & Mining,INE1CLE01013
+VEDL,Vedanta Ltd.,Metals & Mining,INE205A01025
+VOGL,Vedanta Oil and Gas Ltd.,Oil Gas & Consumable Fuels,INE704J01044
+VEDPOWER,Vedanta Power Ltd.,Power,INE694L01019
+VESUVIUS,Vesuvius India Ltd.,Capital Goods,INE386A01023
+VIJAYA,Vijaya Diagnostic Centre Ltd.,Healthcare,INE043W01024
+VIKRAMSOLR,Vikram Solar Ltd.,Capital Goods,INE078V01014
+VMM,Vishal Mega Mart Ltd.,Consumer Services,INE01EA01019
+VIYASH,Viyash Scientific Ltd.,Healthcare,INE807F01027
+IDEA,Vodafone Idea Ltd.,Telecommunication,INE669E01016
+VOLTAMP,Voltamp Transformers Ltd,Capital Goods,INE540H01012
+VOLTAS,Voltas Ltd.,Consumer Durables,INE226A01021
+WAAREEENER,Waaree Energies Ltd.,Capital Goods,INE377N01017
+WAAREERTL,Waaree Renewable Technologies Ltd.,Capital Goods,INE299N01021
+WAKEFIT,Wakefit Innovations Ltd.,Consumer Durables,INE0E7301029
+WEWORK,WeWork India Management Ltd.,Services,INE085001019
+WEBELSOLAR,Websol Energy System Ltd.,Capital Goods,INE855C01023
+WELCORP,Welspun Corp Ltd.,Capital Goods,INE191B01025
+WELENT,Welspun Enterprises Ltd.,Construction,INE625G01013
+WELSPUNLIV,Welspun Living Ltd.,Textiles,INE192B01031
+WESTLIFE,Westlife Foodworld Ltd.,Consumer Services,INE274F01020
+WHIRLPOOL,Whirlpool of India Ltd.,Consumer Durables,INE716A01013
+WIPRO,Wipro Ltd.,Information Technology,INE075A01022
+WOCKPHARMA,Wockhardt Ltd.,Healthcare,INE049B01025
+YATHARTH,Yatharth Hospital & Trauma Care Services Ltd.,Healthcare,INE0JO301016
+YESBANK,Yes Bank Ltd.,Financial Services,INE528G01035
+ZFCVINDIA,ZF Commercial Vehicle Control Systems India Ltd.,Automobile and Auto Components,INE342J01019
+ZAGGLE,Zaggle Prepaid Ocean Services Ltd.,Information Technology,INE07K301024
+ZEEL,Zee Entertainment Enterprises Ltd.,Media Entertainment & Publication,INE256A01028
+ZENTEC,Zen Technologies Ltd.,Capital Goods,INE251B01027
+ZENSARTECH,Zensar Technolgies Ltd.,Information Technology,INE520A01027
+ZYDUSLIFE,Zydus Lifesciences Ltd.,Healthcare,INE010B01027
+ZYDUSWELL,Zydus Wellness Ltd.,Fast Moving Consumer Goods,INE768C01028
+ECLERX,eClerx Services Ltd.,Services,INE738I01010

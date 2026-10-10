@@ -1,0 +1,14 @@
+{
+  "index": "Nifty Total Market",
+  "source_url": "https://www.niftyindices.com/IndexConstituent/ind_niftytotalmarket_list.csv",
+  "source_page": "https://www.niftyindices.com/indices/equity/broad-based-indices/nifty-total-market",
+  "retrieved_at_utc": "2026-10-10T19:44:27.867Z",
+  "source_last_modified_http": "Fri, 09 Oct 2026 18:00:32 GMT",
+  "source_effective_date": null,
+  "source_sha256": "af5b8bfd8590c75ddc4abdec7a742b9efe2ce03f426ccceffb57e3a281efe84f",
+  "index_target_count": 750,
+  "symbol_count": 755,
+  "exchange": "NSE",
+  "selection": "All rows in the official constituent download, in source order; no truncation to 700 or 750.",
+  "notes": "The download does not state a constituent effective date. HTTP Last-Modified is a file timestamp, not proof of an effective date. This snapshot is not historical index membership. NSE symbols may not all resolve on Yahoo Finance."
+}

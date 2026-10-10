@@ -176,8 +176,52 @@ row's** `alltimehigh`. Comparing it with its own inclusive `alltimehigh` using `
 would never trigger. The stored column still includes the current row as shown above.
 
 An API failure, empty response or invalid close exits with a nonzero status and
-leaves an existing CSV untouched. The script makes one API request per invocation;
-it is a single-stock exporter, not a 500-stock batch job.
+leaves that stock's existing CSV untouched.
+
+### Download the stock list in one command
+
+[`symbols/nifty_total_market.csv`](symbols/nifty_total_market.csv) contains all
+**755 unique NSE symbols** in the official Nifty Total Market constituent file
+retrieved on **10 October 2026**. Columns are `symbol`, `company_name`, `industry`
+and `isin`. The script reads the `symbol` column and selects NSE by default.
+
+No official "Nifty 700" index was found in NSE's index catalogue. The
+[Nifty Total Market index](https://www.niftyindices.com/indices/equity/broad-based-indices/nifty-total-market)
+targets 750 stocks. Its downloaded file currently has 755 rows; this repository
+preserves the complete source list without choosing an arbitrary 700-stock subset.
+The [official CSV](https://www.niftyindices.com/IndexConstituent/ind_niftytotalmarket_list.csv)
+and retrieval details are recorded in
+[`symbols/nifty_total_market.metadata.json`](symbols/nifty_total_market.metadata.json).
+The source's HTTP Last-Modified is 9 October 2026; the CSV itself supplies no
+membership effective date. This committed list is a snapshot and does not refresh
+automatically. It is not historical index membership: using this list for earlier
+years can introduce survivorship bias.
+
+With the API running, open a second terminal in the repository:
+
+```bash
+python download_monthly_ath.py --symbols-file symbols/nifty_total_market.csv --completed-only
+```
+
+The batch saves one file per stock, such as `data/TCS.NS_monthly_ath.csv`, including
+the running `alltimehigh` close. It validates the input list before downloading,
+removes duplicate symbols, makes sequential API requests with a two-second delay,
+and continues when a stock fails. This does not guarantee avoiding Yahoo rate limits
+or that every NSE symbol has Yahoo history. Coverage warnings identify the symbol.
+
+After the run, `data/failed_symbols.csv` lists failed symbols and their errors.
+The process returns status 1 if any stock failed, otherwise 0. A successful batch
+writes a header-only failure file. To retry a nonempty failure list:
+
+```bash
+python download_monthly_ath.py --symbols-file data/failed_symbols.csv --completed-only --delay 10
+```
+
+Keep the same adjustment and completed-month options when retrying. Successful
+downloads replace their existing price files. `--api-url` selects your running
+API, `--output-dir` changes the output directory, and `--delay` changes the pause
+between requests. `--output` is for single-stock mode. You may supply your own
+CSV with a `symbol` header to use a different universe.
 
 Run the script's tests without additional packages:
 
