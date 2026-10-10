@@ -129,6 +129,65 @@ or inconsistent OHLC values cause an error rather than a misleading candle.
 
 `GET /health` checks application liveness without contacting Yahoo.
 
+## Download a CSV with a running all-time-high close
+
+[`download_monthly_ath.py`](download_monthly_ath.py) takes a stock symbol, calls
+this API, sorts the monthly candles oldest first and adds one column:
+**`alltimehigh` = the highest monthly CLOSE up to and including the current row.**
+The first row's `alltimehigh` equals its own close. A new closing-price record
+updates `alltimehigh` on that same row. This uses the closing price, not the
+monthly high, and never uses a future row.
+
+| Month | Close | alltimehigh |
+| --- | ---: | ---: |
+| January | 100 | 100 |
+| February | 90 | 100 |
+| March | 120 | 120 |
+| April | 110 | 120 |
+
+With the API already running:
+
+```bash
+# Default API: http://127.0.0.1:8000
+python download_monthly_ath.py TCS
+
+# Call your deployed API and choose the CSV filename
+python download_monthly_ath.py TCS --api-url https://YOUR_HOST --output TCS_monthly_ath.csv
+
+# Only completed months, for monthly backtests
+python download_monthly_ath.py TCS --completed-only
+
+# BSE or dividend-adjusted prices, if required
+python download_monthly_ath.py TCS.BO --adjusted
+```
+
+The default output is `data/TCS.NS_monthly_ath.csv`. Original candle columns are
+preserved and `alltimehigh` is appended. Pass an exchange ticker such as `TCS`,
+not a full company name. `--api-url` is the base URL without `/mcp` or the REST
+endpoint path. The script uses only Python's standard library and no credentials.
+
+By default, the ongoing month is included, matching the API. Its close and ATH
+may change; use `--completed-only` to exclude it. Coverage warnings from the API
+are printed. ATH is calculated only over the returned history beginning in 2000
+or later; earlier history and gaps cannot be reconstructed by this script.
+
+For a closing-price breakout signal, compare the current close with the **previous
+row's** `alltimehigh`. Comparing it with its own inclusive `alltimehigh` using `>`
+would never trigger. The stored column still includes the current row as shown above.
+
+An API failure, empty response or invalid close exits with a nonzero status and
+leaves an existing CSV untouched. The script makes one API request per invocation;
+it is a single-stock exporter, not a 500-stock batch job.
+
+Run the script's tests without additional packages:
+
+```bash
+python -m unittest discover -s tests -p 'test_download_monthly_ath.py' -v
+```
+
+These tests use synthetic prices, including an HTTP server exercising the real
+CLI download-to-CSV path; they do not establish live Yahoo availability.
+
 ## MCP server — no authentication
 
 The same application serves a **Streamable HTTP MCP endpoint** at
